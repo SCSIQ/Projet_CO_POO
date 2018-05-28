@@ -19,7 +19,7 @@ public class Asteroid_SCS {
     public static void main(String[] args) {
         // TODO code application logic here
         
-        Jeu jeuAsteroid = new Asteroid(300, 300, "Asteroid");
+        Jeu jeuAsteroid = new Asteroid(500, 500, "Asteroid");
         
     }
     
