@@ -9,7 +9,9 @@ import iut.Jeu;
 import iut.Objet;
 import iut.ObjetTouchable;
 import static java.awt.Color.blue;
+import static java.awt.Color.red;
 import java.awt.Graphics;
+import static jdk.nashorn.internal.objects.NativeMath.random;
 
 /**
  *
@@ -38,8 +40,12 @@ public class Bloc extends ObjetTouchable{
     
     @Override
     public void dessiner (Graphics g) {
-        g.setColor(blue);
-        g.fillOval(0, 0, 50, 50);
+        int xAlea;
+        int yAlea;
+        xAlea=(int) (random(6)*500);
+        yAlea=(int) (random(6)*500);
+        g.setColor(red);
+        g.fillOval(xAlea, yAlea, 50, 50);
     }
     
     

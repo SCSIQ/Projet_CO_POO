@@ -8,13 +8,18 @@ package asteroid_scs;
 import iut.Jeu;
 import java.awt.Color;
 import java.awt.Graphics;
+import java.awt.Image;
+import java.awt.Toolkit;
+import java.io.File;
+import javax.imageio.ImageIO;
 
 /**
  *
  * @author Alexiane
  */
 public class Asteroid extends Jeu {
-
+   Image comete = Toolkit.getDefaultToolkit().getImage("fond.jpg");
+    
     public Asteroid(int largeur, int hauteur, String title) {
         super(largeur, hauteur, title);
         dessinerArrierePlan(this.getGraphics());
@@ -25,7 +30,9 @@ public class Asteroid extends Jeu {
        
     public void dessinerArrierePlan(Graphics gfx ){
         gfx.setColor(Color.black);
-        gfx.fillRect(0, 0, 500, 500);
+       /* gfx.drawImage(comete, 500, 500, this);
+        gfx.finalize();*/
+       gfx.fillRect(0, 0, 500, 500);
     }
     
     @Override
@@ -34,10 +41,13 @@ public class Asteroid extends Jeu {
 
         Bloc comete = new Bloc(this, "comete", 0, 0);
         vJoueur.dessiner(this.getGraphics());
-        comete.dessiner(this.getGraphics());
+        
+        for(int i=1;i<5;i++){
+            comete.dessiner(this.getGraphics());
+        }
 
         Graphics GVaisseau = this.getGraphics();
-        GVaisseau.setColor(Color.WHITE);
+       
         vJoueur.dessiner(GVaisseau);
     }
 

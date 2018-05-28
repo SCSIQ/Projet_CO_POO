@@ -8,6 +8,7 @@ package asteroid_scs;
 import iut.Jeu;
 import iut.Objet;
 import iut.ObjetTouchable;
+import static java.awt.Color.WHITE;
 import java.awt.Graphics;
 
 /**
@@ -38,6 +39,7 @@ public class Vaisseau extends ObjetTouchable {
     @Override
     public void dessiner (Graphics g) {
         g.drawOval(50, 50, 20, 20);
+       
     }
     
 }
