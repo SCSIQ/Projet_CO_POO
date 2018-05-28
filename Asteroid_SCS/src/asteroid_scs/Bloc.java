@@ -42,10 +42,14 @@ public class Bloc extends ObjetTouchable{
     public void dessiner (Graphics g) {
         int xAlea;
         int yAlea;
+        int wAlea;
+       
         xAlea=(int) (random(6)*500);
         yAlea=(int) (random(6)*500);
+        wAlea=(int) (random(6)*100);
+        
         g.setColor(red);
-        g.fillOval(xAlea, yAlea, 50, 50);
+        g.fillOval(xAlea, yAlea, wAlea, wAlea);
     }
     
     
