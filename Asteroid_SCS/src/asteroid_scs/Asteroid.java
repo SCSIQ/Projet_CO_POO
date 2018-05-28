@@ -32,14 +32,9 @@ public class Asteroid extends Jeu {
        
     public void dessinerArrierePlan(Graphics gfx ){
         gfx.setColor(Color.black);
-<<<<<<< HEAD
-       gfx.fillRect(0, 0, 500, 500);
-       gfx.setColor(Color.GRAY);
-       
-=======
         gfx.fillRect(0, 0, 500, 500);
         gfx.fillRect(0, 0, 500, 500);
->>>>>>> 7491cc8b2b4fafb2314cb54e625824d98bf0f2cf
+
         gfx.setColor(Color.white);
         gfx.drawString("Vies : ", 300, 10);
         String sVie = ""+vie;
