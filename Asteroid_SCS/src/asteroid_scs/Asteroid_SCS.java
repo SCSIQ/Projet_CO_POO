@@ -5,6 +5,8 @@
  */
 package asteroid_scs;
 
+import iut.Jeu;
+
 /**
  *
  * @author aurian
@@ -16,6 +18,9 @@ public class Asteroid_SCS {
      */
     public static void main(String[] args) {
         // TODO code application logic here
+        
+        Jeu jeuAsteroid = new Asteroid(300, 300, "Asteroid");
+        
     }
     
 }
