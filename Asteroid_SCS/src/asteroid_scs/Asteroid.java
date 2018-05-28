@@ -34,14 +34,14 @@ public class Asteroid extends Jeu {
         gfx.setColor(Color.black);
         gfx.fillRect(0, 0, 500, 500);
         gfx.fillRect(0, 0, 500, 500);
-
+        gfx.fillRect(0, 0, 500, 500);
         gfx.setColor(Color.white);
-        gfx.drawString("Vies : ", 300, 10);
+        gfx.drawString("Vies : ", 300, 15);
         String sVie = ""+vie;
-        gfx.drawString(sVie, 338, 10);
-        gfx.drawString("Score : ", 400, 10);
+        gfx.drawString(sVie, 338, 15);
+        gfx.drawString("Score : ", 400, 15);
         String sScore = ""+score;
-        gfx.drawString(sScore, 448, 10);
+        gfx.drawString(sScore, 448, 15);
     }
     
     @Override
