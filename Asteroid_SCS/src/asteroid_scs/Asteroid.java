@@ -43,7 +43,7 @@ public class Asteroid extends Jeu {
         Bloc comete = new Bloc(this, "comete", 0, 0);
         vJoueur.dessiner(this.getGraphics());
         
-        for(int i=1;i<5;i++){
+        for(int i=1;i<6;i++){
             comete.dessiner(this.getGraphics());
         }
 
