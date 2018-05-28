@@ -21,6 +21,8 @@ public class Asteroid_SCS {
         
         Jeu jeuAsteroid = new Asteroid(500, 500, "Asteroid");
         
+        Vaisseau vJoueur = new Vaisseau(jeuAsteroid, "vaisseauJoueur", 0, 0);
+        
     }
     
 }
