@@ -6,6 +6,8 @@
 package asteroid_scs;
 
 import iut.Jeu;
+import java.awt.Graphics;
+import java.awt.Graphics2D;
 
 /**
  *
@@ -20,8 +22,6 @@ public class Asteroid_SCS {
         // TODO code application logic here
         
         Jeu jeuAsteroid = new Asteroid(500, 500, "Asteroid");
-        
-        Vaisseau vJoueur = new Vaisseau(jeuAsteroid, "vaisseauJoueur", 0, 0);
         
     }
     
