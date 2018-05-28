@@ -18,10 +18,8 @@ public class Asteroid extends Jeu {
     public Asteroid(int largeur, int hauteur, String title) {
         super(largeur, hauteur, title);
         dessinerArrierePlan(this.getGraphics());
-        Vaisseau vJoueur = new Vaisseau(this, "joueur", 0, 0);
-        Graphics GVaisseau = this.getGraphics();
-        GVaisseau.setColor(Color.WHITE);
-        vJoueur.dessiner(GVaisseau);
+        creeObjets();
+
     }
     
        
@@ -32,7 +30,15 @@ public class Asteroid extends Jeu {
     
     @Override
     protected void creeObjets() {
-        
+        Vaisseau vJoueur = new Vaisseau(this, "joueur", 0, 0);
+
+        Bloc comete = new Bloc(this, "comete", 0, 0);
+        vJoueur.dessiner(this.getGraphics());
+        comete.dessiner(this.getGraphics());
+
+        Graphics GVaisseau = this.getGraphics();
+        GVaisseau.setColor(Color.WHITE);
+        vJoueur.dessiner(GVaisseau);
     }
 
     @Override
