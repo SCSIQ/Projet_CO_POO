@@ -19,7 +19,9 @@ public class Asteroid extends Jeu {
         super(largeur, hauteur, title);
         dessinerArrierePlan(this.getGraphics());
         Vaisseau vJoueur = new Vaisseau(this, "joueur", 0, 0);
+        Bloc comete = new Bloc(this, "comete", 0, 0);
         vJoueur.dessiner(this.getGraphics());
+        comete.dessiner(this.getGraphics());
     }
     
        

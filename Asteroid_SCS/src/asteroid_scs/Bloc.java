@@ -8,6 +8,8 @@ package asteroid_scs;
 import iut.Jeu;
 import iut.Objet;
 import iut.ObjetTouchable;
+import static java.awt.Color.blue;
+import java.awt.Graphics;
 
 /**
  *
@@ -33,5 +35,12 @@ public class Bloc extends ObjetTouchable{
     public void evoluer(long l) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
+    
+    @Override
+    public void dessiner (Graphics g) {
+        g.setColor(blue);
+        g.fillOval(0, 0, 50, 50);
+    }
+    
     
 }
