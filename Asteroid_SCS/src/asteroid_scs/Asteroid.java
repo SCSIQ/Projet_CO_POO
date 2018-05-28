@@ -18,7 +18,9 @@ import javax.imageio.ImageIO;
  * @author Alexiane
  */
 public class Asteroid extends Jeu {
-   Image comete = Toolkit.getDefaultToolkit().getImage("fond.jpg");
+    Image comete = Toolkit.getDefaultToolkit().getImage("fond.jpg");
+    private int score = 0;
+    private int vie = 3;
     
     public Asteroid(int largeur, int hauteur, String title) {
         super(largeur, hauteur, title);
@@ -30,11 +32,21 @@ public class Asteroid extends Jeu {
        
     public void dessinerArrierePlan(Graphics gfx ){
         gfx.setColor(Color.black);
+<<<<<<< HEAD
        gfx.fillRect(0, 0, 500, 500);
        gfx.setColor(Color.GRAY);
        
+=======
+        gfx.fillRect(0, 0, 500, 500);
+        gfx.fillRect(0, 0, 500, 500);
+>>>>>>> 7491cc8b2b4fafb2314cb54e625824d98bf0f2cf
         gfx.setColor(Color.white);
+        gfx.drawString("Vies : ", 300, 10);
+        String sVie = ""+vie;
+        gfx.drawString(sVie, 338, 10);
         gfx.drawString("Score : ", 400, 10);
+        String sScore = ""+score;
+        gfx.drawString(sScore, 448, 10);
     }
     
     @Override
