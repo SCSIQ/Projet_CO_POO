@@ -31,7 +31,8 @@ public class Asteroid extends Jeu {
     public void dessinerArrierePlan(Graphics gfx ){
         gfx.setColor(Color.black);
        gfx.fillRect(0, 0, 500, 500);
-        gfx.fillRect(0, 0, 500, 500);
+       gfx.setColor(Color.GRAY);
+       
         gfx.setColor(Color.white);
         gfx.drawString("Score : ", 400, 10);
     }

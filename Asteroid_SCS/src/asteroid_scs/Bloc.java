@@ -44,9 +44,9 @@ public class Bloc extends ObjetTouchable{
         int yAlea;
         int wAlea;
        
-        xAlea=(int) (random(6)*500);
-        yAlea=(int) (random(6)*500);
-        wAlea=(int) (random(6)*100);
+        xAlea=(int) (random(6)*500)+10;
+        yAlea=(int) (random(6)*500)+10;
+        wAlea=(int) (random(6)*70)+20;
         
         g.setColor(red);
         g.fillOval(xAlea, yAlea, wAlea, wAlea);
