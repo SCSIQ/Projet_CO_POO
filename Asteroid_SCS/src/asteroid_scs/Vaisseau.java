@@ -37,7 +37,17 @@ public class Vaisseau extends ObjetTouchable {
     
     @Override
     public void dessiner (Graphics g) {
-        g.drawOval(50, 50, 20, 20);
+        int x = 10;
+        int y = 10;
+        int[] tabx = new int[3];
+        int[] taby = new int[3];
+        tabx[0] = x;
+        taby[0] = y;
+        tabx[1] = x+20;
+        taby[1] = y+10;
+        tabx[2] = x;
+        taby[2] = y+20;
+        g.drawPolygon(tabx, taby, 3);
     }
     
 }
