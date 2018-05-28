@@ -7,6 +7,10 @@ package asteroid_scs;
 
 import iut.Jeu;
 import java.awt.Graphics;
+<<<<<<< HEAD
+=======
+import java.awt.Graphics2D;
+>>>>>>> a3882656a155a697c82fc9394020ce15ecb60c5a
 
 /**
  *
@@ -20,6 +24,7 @@ public class Asteroid_SCS {
     public static void main(String[] args) throws Exception {
         // TODO code application logic here
         Jeu jeuAsteroid = new Asteroid(500, 500, "Asteroid");
+<<<<<<< HEAD
        
         Vaisseau vJoueur = new Vaisseau(jeuAsteroid, "vaisseauJoueur", 0, 0);
         
@@ -27,6 +32,8 @@ public class Asteroid_SCS {
       
         
 
+=======
+>>>>>>> a3882656a155a697c82fc9394020ce15ecb60c5a
         
     }
     

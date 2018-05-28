@@ -8,6 +8,7 @@ package asteroid_scs;
 import iut.Jeu;
 import iut.Objet;
 import iut.ObjetTouchable;
+import java.awt.Graphics;
 
 /**
  *
@@ -32,6 +33,11 @@ public class Vaisseau extends ObjetTouchable {
     @Override
     public void evoluer(long l) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+    
+    @Override
+    public void dessiner (Graphics g) {
+        g.drawOval(50, 50, 20, 20);
     }
     
 }

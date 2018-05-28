@@ -18,6 +18,8 @@ public class Asteroid extends Jeu {
     public Asteroid(int largeur, int hauteur, String title) {
         super(largeur, hauteur, title);
         dessinerArrierePlan(this.getGraphics());
+        Vaisseau vJoueur = new Vaisseau(this, "joueur", 0, 0);
+        vJoueur.dessiner(this.getGraphics());
     }
     
        
