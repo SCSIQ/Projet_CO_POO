@@ -6,6 +6,7 @@
 package asteroid_scs;
 
 import iut.Jeu;
+import java.awt.Color;
 import java.awt.Graphics;
 
 /**
@@ -16,13 +17,15 @@ public class Asteroid extends Jeu {
 
     public Asteroid(int largeur, int hauteur, String title) {
         super(largeur, hauteur, title);
+        dessinerArrierePlan(this.getGraphics());
     }
     
        
-    public void dessinerArrierePlan(Graphics g ){
-        
+    public void dessinerArrierePlan(Graphics gfx ){
+        gfx.setColor(Color.black);
+        gfx.fillRect(0, 0, 500, 500);
     }
-
+    
     @Override
     protected void creeObjets() {
         
