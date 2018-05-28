@@ -23,6 +23,7 @@ public class Asteroid_SCS {
         
         Vaisseau vJoueur = new Vaisseau(jeuAsteroid, "vaisseauJoueur", 0, 0);
         
+        Bloc comete = new Bloc(jeuAsteroid, "bloc",0,0);
     }
     
 }
