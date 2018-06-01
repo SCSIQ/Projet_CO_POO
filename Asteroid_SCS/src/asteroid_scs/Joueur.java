@@ -20,6 +20,16 @@ public class Joueur {
         return "";
     }
     
+    void evoluer(long dt){
+        
+    }
     
+    void effetCollision(Object o){
+        
+    }
+    
+    /*void keyPress(keyEvent k){
+        
+    }*/
     
 }
