@@ -28,7 +28,7 @@ public class Vaisseau extends ObjetTouchable implements KeyListener {
 
     @Override
     public String getTypeObjet() {
-        return "";
+        return "Vaisseau";
     }
 
     @Override
