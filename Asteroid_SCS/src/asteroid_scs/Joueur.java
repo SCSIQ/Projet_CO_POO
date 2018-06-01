@@ -5,10 +5,21 @@
  */
 package asteroid_scs;
 
+import iut.Jeu;
+
 /**
  *
  * @author Alexiane
  */
 public class Joueur {
+
+    public Joueur(Jeu jeu) {
+    }
+    
+    String getTypeObject(){
+        return "";
+    }
+    
+    
     
 }
