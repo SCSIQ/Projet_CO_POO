@@ -5,14 +5,18 @@
  */
 package asteroid_scs;
 
+import iut.Jeu;
+
 /**
  *
  * @author Alexiane
  */
-public class MoyenAsteroide extends Asteroid {
+public class MoyenAsteroide extends Bloc {
     
-    public MoyenAsteroide(int largeur, int hauteur, String title) {
-        super(largeur, hauteur, title);
+    public MoyenAsteroide(Jeu g, String nom, int x, int y) {
+        super(g, nom, x, y);
     }
+    
+   
     
 }
