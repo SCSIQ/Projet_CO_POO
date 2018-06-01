@@ -6,6 +6,7 @@
 package asteroid_scs;
 
 import iut.Jeu;
+import iut.Objet;
 
 /**
  *
@@ -15,6 +16,16 @@ public class GrosAsteroide extends Bloc {
     
     public GrosAsteroide(Jeu g, String nom, int x, int y) {
         super(g, nom, x, y);
+    }
+
+    @Override
+    public void effetCollision(Objet objet) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public String getTypeObjet() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
     
    

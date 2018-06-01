@@ -48,7 +48,7 @@ public class Asteroid extends Jeu {
     protected void creeObjets() {
         Vaisseau vJoueur = new Vaisseau(this, "joueur", 0, 0);
 
-        Bloc comete = new Bloc(this, "comete", 0, 0);
+      PetitAsteroide comete = new PetitAsteroide(20,20,"comete" ); 
         vJoueur.dessiner(this.getGraphics());
         
         for(int i=1;i<6;i++){
