@@ -25,7 +25,7 @@ public class Asteroid_SCS {
 
         Vaisseau vJoueur = new Vaisseau(jeuAsteroid, "vaisseauJoueur", 0, 0);
         
-       PetitAsteroide comete = new PetitAsteroide(20,20,"ast1" ); 
+       PetitAsteroide comete = new PetitAsteroide(jeuAsteroid,"ast1",10,10);
 
         
     }

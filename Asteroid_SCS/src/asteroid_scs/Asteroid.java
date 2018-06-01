@@ -86,6 +86,6 @@ public class Asteroid extends Jeu {
     }
     
     public void setScore(int sc){
-        score=sc;
+        score+=sc;
     }
 }
