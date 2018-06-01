@@ -8,6 +8,10 @@ package asteroid_scs;
 import iut.Jeu;
 import iut.Objet;
 import iut.ObjetTouchable;
+import static java.awt.Color.blue;
+import static java.awt.Color.red;
+import java.awt.Graphics;
+import static jdk.nashorn.internal.objects.NativeMath.random;
 
 /**
  *
@@ -33,5 +37,20 @@ public class Bloc extends ObjetTouchable{
     public void evoluer(long l) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
+    
+    @Override
+    public void dessiner (Graphics g) {
+        int xAlea;
+        int yAlea;
+        int wAlea;
+       
+        xAlea=(int) (random(6)*500)+10;
+        yAlea=(int) (random(6)*500)+10;
+        wAlea=(int) (random(6)*70)+20;
+        
+        g.setColor(red);
+        g.fillOval(xAlea, yAlea, wAlea, wAlea);
+    }
+    
     
 }
