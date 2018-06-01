@@ -54,7 +54,7 @@ public class Asteroid extends Jeu {
         
         //Bloc comete = new Bloc(this, "comete", 0, 0) {};
 
-        //PetitAsteroide comete = new PetitAsteroide(jeu ,"comete",20,20 ); 
+        PetitAsteroide comete = new PetitAsteroide(jeu ,"comete",20,20 ); 
 
         
         for(int i=1;i<6;i++){
