@@ -1,5 +1,8 @@
+package asteroid_scs;
+
 
 import asteroid_scs.Asteroid;
+import iut.Jeu;
 
 /*
  * To change this license header, choose License Headers in Project Properties.
@@ -11,10 +14,12 @@ import asteroid_scs.Asteroid;
  *
  * @author Alexiane
  */
-public class PetitAsteroide extends Asteroid {
+public class PetitAsteroide extends Bloc {
     
-    public PetitAsteroide(int largeur, int hauteur, String title) {
-        super(largeur, hauteur, title);
+    public PetitAsteroide(Jeu g, String nom, int x, int y) {
+        super(g, nom, x, y);
     }
+    
+ 
     
 }
