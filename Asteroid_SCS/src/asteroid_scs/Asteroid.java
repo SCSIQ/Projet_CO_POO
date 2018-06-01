@@ -22,6 +22,7 @@ public class Asteroid extends Jeu {
     private int score = 0;
     private int vie = 3;
     private Vaisseau joueur;
+    private Jeu jeu ; 
     
     public Asteroid(int largeur, int hauteur, String title) {
         super(largeur, hauteur, title);
@@ -48,10 +49,13 @@ public class Asteroid extends Jeu {
     
     @Override
     protected void creeObjets() {
-                
+       
         joueur.dessiner(this.getGraphics(),10,10);
         
-        Bloc comete = new Bloc(this, "comete", 0, 0);
+        //Bloc comete = new Bloc(this, "comete", 0, 0) {};
+
+        //PetitAsteroide comete = new PetitAsteroide(jeu ,"comete",20,20 ); 
+
         
         for(int i=1;i<6;i++){
             comete.dessiner(this.getGraphics());
@@ -78,4 +82,12 @@ public class Asteroid extends Jeu {
         return false ; 
     }
     
+    public int getScore(){
+        return score;
+    }
+    
+    public void setScore(int sc){
+        score+=sc;
+    }
+
 }
