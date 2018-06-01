@@ -14,10 +14,12 @@ import iut.ObjetTouchable;
  */
 public class Tir extends ObjetTouchable{
     private double angle ; 
+    private Jeu jeu;
 
 
     public Tir(Jeu g, String nom, int x, int y) {
         super(g, nom, x, y);
+        jeu=g;
     }
 
     @Override
@@ -25,14 +27,14 @@ public class Tir extends ObjetTouchable{
            if (testerCollision(objet)==true){
                if(objet.getTypeObjet()=="GrosAsteroide"){
                    
-                   MoyenAsteroide ma1 = new MoyenAsteroide(20,20,"ast1");
-                   MoyenAsteroide ma2 = new MoyenAsteroide(20,20,"ast2");
+                   MoyenAsteroide ma1 = new MoyenAsteroide(jeu,20,20,"ast1");
+                   MoyenAsteroide ma2 = new MoyenAsteroide(jeu,20,20,"ast2");
                    
                }else if(objet.getTypeObjet()=="MoyenAsteroide"){
-                   PetitAsteroide pa1 = new PetitAsteroide(10,10,"ast1");
-                   PetitAsteroide pa2 = new PetitAsteroide(10,10,"ast2");
-                   PetitAsteroide pa3 = new PetitAsteroide(10,10,"ast3");
-                   PetitAsteroide pa4 = new PetitAsteroide(10,10,"ast4");
+                   PetitAsteroide pa1 = new PetitAsteroide(jeu,10,10,"ast1");
+                   PetitAsteroide pa2 = new PetitAsteroide(jeu,10,10,"ast2");
+                   PetitAsteroide pa3 = new PetitAsteroide(jeu,10,10,"ast3");
+                   PetitAsteroide pa4 = new PetitAsteroide(jeu,10,10,"ast4");
                    
                }else if(objet.getTypeObjet()=="PetitAsteroide"){
                    
