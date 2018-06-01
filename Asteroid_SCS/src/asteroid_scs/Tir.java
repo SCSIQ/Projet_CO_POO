@@ -27,14 +27,14 @@ public class Tir extends ObjetTouchable{
            if (testerCollision(objet)==true){
                if(objet.getTypeObjet()=="GrosAsteroide"){
                    
-                   MoyenAsteroide ma1 = new MoyenAsteroide(jeu,20,20,"ast1");
-                   MoyenAsteroide ma2 = new MoyenAsteroide(jeu,20,20,"ast2");
+                   MoyenAsteroide ma1 = new MoyenAsteroide(jeu,"ast1",20,20);
+                   MoyenAsteroide ma2 = new MoyenAsteroide(jeu,"ast2",20,20);
                    
                }else if(objet.getTypeObjet()=="MoyenAsteroide"){
-                   PetitAsteroide pa1 = new PetitAsteroide(jeu,10,10,"ast1");
-                   PetitAsteroide pa2 = new PetitAsteroide(jeu,10,10,"ast2");
-                   PetitAsteroide pa3 = new PetitAsteroide(jeu,10,10,"ast3");
-                   PetitAsteroide pa4 = new PetitAsteroide(jeu,10,10,"ast4");
+                   PetitAsteroide pa1 = new PetitAsteroide(jeu,"ast1",10,10);
+                   PetitAsteroide pa2 = new PetitAsteroide(jeu,"ast2",10,10);
+                   PetitAsteroide pa3 = new PetitAsteroide(jeu,"ast3",10,10);
+                   PetitAsteroide pa4 = new PetitAsteroide(jeu,"ast4",10,10);
                    
                }else if(objet.getTypeObjet()=="PetitAsteroide"){
                    

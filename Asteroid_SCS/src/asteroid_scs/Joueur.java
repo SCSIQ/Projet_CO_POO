@@ -12,7 +12,6 @@ import iut.Jeu;
  * @author Alexiane
  */
 public class Joueur {
-
     public Joueur(Jeu jeu) {
     }
     
@@ -27,6 +26,8 @@ public class Joueur {
     void effetCollision(Object o){
         
     }
+    
+    
     
     /*void keyPress(keyEvent k){
         

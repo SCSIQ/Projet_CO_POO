@@ -79,4 +79,12 @@ public class Asteroid extends Jeu {
     protected boolean aPerdu() {
         return false ; 
     }
+    
+    public int getScore(){
+        return score;
+    }
+    
+    public void setScore(int sc){
+        score=sc;
+    }
 }
