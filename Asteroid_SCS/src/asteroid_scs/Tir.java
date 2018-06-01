@@ -10,11 +10,11 @@ import iut.Objet;
 import iut.ObjetTouchable;
 
 /**
- *
  * @author lb078916
  */
 public class Tir extends ObjetTouchable{
     private double angle ; 
+
 
     public Tir(Jeu g, String nom, int x, int y) {
         super(g, nom, x, y);
@@ -22,17 +22,17 @@ public class Tir extends ObjetTouchable{
 
     @Override
     public void effetCollision(Objet objet) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+
     }
 
     @Override
     public String getTypeObjet() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+return "";
     }
 
     @Override
     public void evoluer(long l) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+
     }
     
 }
