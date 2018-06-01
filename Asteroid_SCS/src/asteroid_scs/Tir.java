@@ -22,17 +22,37 @@ public class Tir extends ObjetTouchable{
 
     @Override
     public void effetCollision(Objet objet) {
-
+           if (testerCollision(objet)==true){
+               if(objet.getTypeObjet()=="GrosAsteroide"){
+                   
+                   MoyenAsteroide ma1 = new MoyenAsteroide(20,20,"ast1");
+                   MoyenAsteroide ma2 = new MoyenAsteroide(20,20,"ast2");
+                   
+               }else if(objet.getTypeObjet()=="MoyenAsteroide"){
+                   PetitAsteroide pa1 = new PetitAsteroide(10,10,"ast1");
+                   PetitAsteroide pa2 = new PetitAsteroide(10,10,"ast2");
+                   PetitAsteroide pa3 = new PetitAsteroide(10,10,"ast3");
+                   PetitAsteroide pa4 = new PetitAsteroide(10,10,"ast4");
+                   
+               }else if(objet.getTypeObjet()=="PetitAsteroide"){
+                   
+               }else if(objet.getTypeObjet()=="PetitAsteroide"){
+                   
+               }else if(objet.getTypeObjet()=="Vaisseau"){
+                   
+               }
+           }
     }
 
     @Override
     public String getTypeObjet() {
-return "";
+        
+    return "tir";
     }
 
     @Override
     public void evoluer(long l) {
-
+        
     }
     
 }
