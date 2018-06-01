@@ -15,7 +15,7 @@ import java.awt.Graphics;
  *
  * @author lb078916
  */
-public class Vaisseau extends ObjetTouchable {
+public class Vaisseau extends ObjetTouchable implements KeyListener {
 
     public Vaisseau(Jeu g, String nom, int x, int y) {
         super(g, nom, x, y);
@@ -51,5 +51,7 @@ public class Vaisseau extends ObjetTouchable {
         taby[2] = y+20;
         g.drawPolygon(tabx, taby, 3);
     }
+    
+    //KeyListener();
     
 }
