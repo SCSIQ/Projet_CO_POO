@@ -1,3 +1,5 @@
+package asteroid_scs;
+
 
 import asteroid_scs.Asteroid;
 
