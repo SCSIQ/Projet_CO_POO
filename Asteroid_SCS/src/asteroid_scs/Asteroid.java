@@ -21,10 +21,12 @@ public class Asteroid extends Jeu {
     Image comete = Toolkit.getDefaultToolkit().getImage("fond.jpg");
     private int score = 0;
     private int vie = 3;
+    private Vaisseau joueur;
     private Jeu jeu ; 
     
     public Asteroid(int largeur, int hauteur, String title) {
         super(largeur, hauteur, title);
+        joueur = new Vaisseau(this, "joueur", 0, 0);
         dessinerArrierePlan(this.getGraphics());
         creeObjets();
 
@@ -47,18 +49,17 @@ public class Asteroid extends Jeu {
     
     @Override
     protected void creeObjets() {
-        Vaisseau vJoueur = new Vaisseau(this, "joueur", 0, 0);
+       
+        joueur.dessiner(this.getGraphics(),10,10);
         
-      PetitAsteroide comete = new PetitAsteroide(jeu ,"comete",20,20 ); 
-        vJoueur.dessiner(this.getGraphics());
+        //Bloc comete = new Bloc(this, "comete", 0, 0) {};
+
+        PetitAsteroide comete = new PetitAsteroide(jeu ,"comete",20,20 ); 
+
         
         for(int i=1;i<6;i++){
             comete.dessiner(this.getGraphics());
         }
-
-        Graphics GVaisseau = this.getGraphics();
-       
-        vJoueur.dessiner(GVaisseau);
     }
 
     @Override
@@ -88,4 +89,5 @@ public class Asteroid extends Jeu {
     public void setScore(int sc){
         score+=sc;
     }
+
 }
