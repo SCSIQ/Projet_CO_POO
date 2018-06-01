@@ -14,6 +14,7 @@ import iut.ObjetTouchable;
  * @author lb078916
  */
 public class Tir extends ObjetTouchable{
+    private double angle ; 
 
     public Tir(Jeu g, String nom, int x, int y) {
         super(g, nom, x, y);
