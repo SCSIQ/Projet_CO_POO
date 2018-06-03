@@ -6,8 +6,16 @@
 package scs_asteroide;
 
 import iut.Jeu;
-
-
+import iut.Lutin;
+import iut.Lutins;
+import java.awt.Image;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+import javax.swing.ImageIcon;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
 
 
 /**
@@ -23,8 +31,13 @@ public class SCS_Asteroide {
         
         // TODO code application logic here
        
-        Jeu jeuAsteroid = new leJeu(500, 500, "Asteroid");
+      Jeu jeuAsteroid = new leJeu(500, 500, "Asteroid");
+        PetitAsteroide a = new PetitAsteroide(jeuAsteroid,"petit", 10, 10 ); 
+
+   	
+   
+        }
        
     }
    
-}
+
