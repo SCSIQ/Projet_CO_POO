@@ -15,6 +15,10 @@ import iut.ObjetTouchable;
  */
 public class Tir extends ObjetTouchable {
 
+    //ATTRIBUTS 
+    private double angle=0 ; 
+    private double vitesse=0.2;
+    
     public Tir(Jeu g, String nom, int x, int y) {
         super(g, nom, x, y);
     }
@@ -31,7 +35,7 @@ public class Tir extends ObjetTouchable {
 
     @Override
     public void evoluer(long l) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        this.deplacerDA(l*vitesse, angle);
     }
     
 }
