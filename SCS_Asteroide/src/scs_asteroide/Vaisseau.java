@@ -21,15 +21,19 @@ import java.awt.event.KeyListener;
 public class Vaisseau extends ObjetTouchable implements KeyListener {
     
     private final Jeu jeu;
+    private Vie vie = null;
 
     public Vaisseau(Jeu g, String nom, int x, int y) {
         super(g, nom, x, y);
         this.jeu = g;
+        vie = new Vie(jeu, "trois_coeur", 675, 10);
+
+        jeu.ajouter(vie);
     }
 
     @Override
     public void effetCollision(Objet objet) {
-        //jeu.getVieJoueur();
+        vie.enleverVie();
     }
 
     @Override
