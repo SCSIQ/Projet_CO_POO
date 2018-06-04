@@ -14,8 +14,6 @@ import java.io.File;
 import javax.swing.JOptionPane;
 
 
-
-
 /**
  *
  * @author emilie
