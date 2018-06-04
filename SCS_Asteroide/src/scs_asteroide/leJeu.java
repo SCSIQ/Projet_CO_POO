@@ -8,13 +8,12 @@ package scs_asteroide;
 import iut.Jeu;
 import java.awt.Color;
 import java.awt.Graphics;
-<<<<<<< HEAD
+
 import java.awt.Image;
 import java.io.File;
 import javax.swing.JOptionPane;
 
-=======
->>>>>>> d0a7a99812f530339b384326e2f7606f89a58d6b
+
 
 
 /**
