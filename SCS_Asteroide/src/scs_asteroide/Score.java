@@ -14,6 +14,11 @@ import iut.Objet;
  */
 public class Score extends iut.Objet {
 
+        //ATTRIBUTS 
+    private int score= 0; 
+
+   
+    
     public Score(Jeu g, int val) {
         super(g, String.valueOf(val), 10, 10);
     }
@@ -36,6 +41,13 @@ public class Score extends iut.Objet {
     @Override
     public void evoluer(long l) {
        
+    }
+     public int getScore() {
+        return score;
+    }
+
+    public void setScore(int score) {
+        this.score = score;
     }
     
 }
