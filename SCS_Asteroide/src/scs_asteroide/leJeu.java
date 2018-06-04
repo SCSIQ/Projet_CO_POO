@@ -93,8 +93,8 @@ public class leJeu extends Jeu{
        return res; 
     }
 
-    public void setScore(int score) {
-        this.score = score;
+    public void ajouterScore(int score) {
+        this.score += score;
     }
 
 }
