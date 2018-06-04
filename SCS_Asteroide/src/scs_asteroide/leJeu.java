@@ -54,9 +54,6 @@ public class leJeu extends Jeu{
 <<<<<<< HEAD
 =======
 
-       // Vie v = new Vie(this, "trois_coeur", 400, 400);
-        //this.ajouter(v);
-
 
 >>>>>>> e546ddc73e0bcbff943aec49420d28fb698ff684
         
