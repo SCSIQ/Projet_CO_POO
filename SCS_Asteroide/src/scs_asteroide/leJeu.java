@@ -28,10 +28,6 @@ public class leJeu extends Jeu{
     private int score = 0;
     private int vie = 3;
 
- 
-
-    
-
     public leJeu(int largeur, int hauteur, String title) {
         super(largeur, hauteur, title);         
     }
@@ -48,7 +44,6 @@ public class leJeu extends Jeu{
         //for(int i=1;i<6;i++){
         //PetitAsteroide comete = new PetitAsteroide(jeu ,"comete",20,20 ); 
         /*for(int i=1;i<6;i++){
->>>>>>> fe2b730a7fbc3bbda1fe6d72c77c5cd8be6ca1fd
             comete.dessiner(this.getGraphics());
         }*/
     }
