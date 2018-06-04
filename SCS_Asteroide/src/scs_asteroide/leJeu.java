@@ -24,6 +24,7 @@ public class leJeu extends Jeu{
 
     //ATTRIBUTS 
     private Vaisseau vaisseau = null;
+
     
    
     private int score = 0;
@@ -89,7 +90,11 @@ public class leJeu extends Jeu{
 
     @Override
     protected boolean aPerdu() {
-       return false ; 
+        boolean res = false ; 
+        if(getVieRestante() == 0){
+            res= true ; 
+        }
+       return res; 
     }
 
     public void setScore(int score) {
