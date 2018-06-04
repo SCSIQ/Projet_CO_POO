@@ -33,6 +33,7 @@ public class GrandAsteroide extends Asteroide {
            
            leJeu().supprimer(this);
           
+           
         }else if (objet.getTypeObjet()=="Moyen asteroide"){
             
         }

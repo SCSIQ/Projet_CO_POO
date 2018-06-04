@@ -94,8 +94,8 @@ genererAsteroide() ;
        return res; 
     }
 
-    public void setScore(int score) {
-        this.score = score;
+    public void ajouterScore(int score) {
+        this.score += score;
     }
     
     public void genererAsteroide(){

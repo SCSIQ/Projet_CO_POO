@@ -33,6 +33,7 @@ public class Vie extends iut.Objet {
             this.changeSprite("un_coeur");
         }
         if(vieRestante == 0){
+            this.changeSprite("zero_coeur");
             //coder fin du jeu car le joueur a perdu
             
         }
