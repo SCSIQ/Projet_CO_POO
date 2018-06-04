@@ -50,12 +50,7 @@ public class leJeu extends Jeu{
         this.ajouter(pa2);        
         this.ajouter(ma);        
         this.ajouter(ga);
-        
-<<<<<<< HEAD
-=======
 
-
->>>>>>> e546ddc73e0bcbff943aec49420d28fb698ff684
         
         vieJoueur = new Vie(this, "trois_coeur", 675, 10);
         this.ajouter(vieJoueur);
