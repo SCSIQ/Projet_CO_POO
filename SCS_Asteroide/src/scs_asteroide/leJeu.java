@@ -50,9 +50,21 @@ public class leJeu extends Jeu{
         this.ajouter(pa2);        
         this.ajouter(ma);        
         this.ajouter(ga);
-       
-genererAsteroide() ; 
 
+        for(int i=0;i<5;i++){
+            if(i==4){
+                System.out.println("hey");
+                GrandAsteroide galea = new GrandAsteroide(this ,"grosA",600,300 );         
+                MoyenAsteroide malea = new MoyenAsteroide(this ,"moyen_asteroide",500,600 ); 
+                PetitAsteroide palea = new PetitAsteroide(this,"petit_asteroide",600,100);
+                PetitAsteroide palea2 = new PetitAsteroide(this,"petit_asteroide",600,400);
+
+                this.ajouter(palea);        
+                this.ajouter(palea2);        
+                this.ajouter(malea);        
+                this.ajouter(galea);
+            }
+        }
     }
 
     @Override
@@ -99,18 +111,7 @@ genererAsteroide() ;
         this.score.ajouterScore(_score);
     }
     
-    public void genererAsteroide(){
-        
-      while(this.aPerdu())  {
-        GrandAsteroide ga = new GrandAsteroide(this ,"grosA",600,300 ); 
-        
-        MoyenAsteroide ma = new MoyenAsteroide(this ,"moyen_asteroide",500,600 ); 
-        PetitAsteroide pa = new PetitAsteroide(this,"petit_asteroide",600,100);
-        
-        this.ajouter(pa);           
-        this.ajouter(ma);        
-        this.ajouter(ga);
-    }
-    }
+
+    
 
 }

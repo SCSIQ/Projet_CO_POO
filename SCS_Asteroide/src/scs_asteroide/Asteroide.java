@@ -21,11 +21,13 @@ public abstract class Asteroide extends ObjetTouchable{
     private int y;
     private double vitesse=0.2;
     private int angle=(int)((random(10)+1)*100);
+    private leJeu jeuAsteroid;
     
     public Asteroide(Jeu g, String nom, int x, int y) {
         super(g, nom, x, y);
         this.x=x;
         this.y=y;
+        jeuAsteroid = (leJeu)g;
     }
     @Override
     public abstract void effetCollision(Objet objet) ;
@@ -40,7 +42,11 @@ public abstract class Asteroide extends ObjetTouchable{
 
 
     }
-    
 
+    public leJeu getJeuAsteroid() {
+        return jeuAsteroid;
+    }
+    
+    
 
 }
