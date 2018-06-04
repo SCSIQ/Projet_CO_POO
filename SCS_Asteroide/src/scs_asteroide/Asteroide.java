@@ -32,10 +32,7 @@ public abstract class Asteroide extends ObjetTouchable{
         
     }
     
-    @Override
-    public void dessiner (Graphics g) {
-        
-    }
+    
     
     
 }

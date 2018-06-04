@@ -39,6 +39,7 @@ public class leJeu extends Jeu{
         this.ajouter(vaisseau);
         
         GrandAsteroide ga = new GrandAsteroide(this ,"grosA",20,0 ); 
+        
         MoyenAsteroide ma = new MoyenAsteroide(this ,"moyen_asteroide",0,0 ); 
         PetitAsteroide pa = new PetitAsteroide(this,"petit_asteroide",200,100);
         
