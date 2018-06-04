@@ -3,18 +3,19 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package asteroid_scs;
+package scs_asteroide;
 
 import iut.Jeu;
 import iut.Objet;
+import iut.ObjetTouchable;
 
 /**
  *
- * @author Alexiane
+ * @author emili
  */
-public class MoyenAsteroide extends Bloc {
-    
-    public MoyenAsteroide(Jeu g, String nom, int x, int y) {
+public class Mur extends ObjetTouchable{
+
+    public Mur(Jeu g, String nom, int x, int y) {
         super(g, nom, x, y);
     }
 
@@ -25,9 +26,12 @@ public class MoyenAsteroide extends Bloc {
 
     @Override
     public String getTypeObjet() {
-        return "MoyenAsteroide";
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
-    
-   
+
+    @Override
+    public void evoluer(long l) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
     
 }

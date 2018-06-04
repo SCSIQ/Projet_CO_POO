@@ -1,23 +1,25 @@
-package asteroid_scs;
-
-
-import asteroid_scs.Asteroid;
-import iut.Jeu;
-import iut.Objet;
-
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
+package scs_asteroide;
+
+import iut.Jeu;
+import iut.Objet;
+import iut.ObjetTouchable;
 
 /**
  *
- * @author Alexiane
+ * @author emilie
  */
-public class PetitAsteroide extends Bloc {
+public class Tir extends ObjetTouchable {
+
+    //ATTRIBUTS 
+    private double angle=0 ; 
+    private double vitesse=0.2;
     
-    public PetitAsteroide(Jeu g, String nom, int x, int y) {
+    public Tir(Jeu g, String nom, int x, int y) {
         super(g, nom, x, y);
     }
 
@@ -28,9 +30,12 @@ public class PetitAsteroide extends Bloc {
 
     @Override
     public String getTypeObjet() {
-       return "PetitAsteroide";
+        return "tir" ; 
     }
-    
- 
+
+    @Override
+    public void evoluer(long l) {
+        this.deplacerDA(l*vitesse, angle);
+    }
     
 }
