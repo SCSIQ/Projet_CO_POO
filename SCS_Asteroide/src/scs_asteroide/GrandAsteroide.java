@@ -25,6 +25,9 @@ public class GrandAsteroide extends Asteroide {
         if(objet.getTypeObjet()=="tir"){
             MoyenAsteroide ma = new MoyenAsteroide(this.leJeu(),"moyen_asteroid",objet.milieuX()-100,objet.milieuY());
             MoyenAsteroide ma2 = new MoyenAsteroide(this.leJeu(),"moyen_asteroid",objet.milieuX()+100,objet.milieuY());
+            
+        }else{
+            
         }
     }
 
