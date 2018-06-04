@@ -15,8 +15,6 @@ import java.io.File;
 import javax.swing.JOptionPane;
 
 
-
-
 /**
  *
  * @author emilie
@@ -51,10 +49,13 @@ public class leJeu extends Jeu{
         this.ajouter(pa2);        
         this.ajouter(ma);        
         this.ajouter(ga);
-        
+
+       
+
         
         Vie v = new Vie(this, "trois_coeur", 675, 10);
         this.ajouter(v);
+
        
        
     }
