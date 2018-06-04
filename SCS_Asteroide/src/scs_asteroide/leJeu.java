@@ -6,8 +6,11 @@
 package scs_asteroide;
 
 import iut.Jeu;
+import iut.Lutin;
 import java.awt.Color;
 import java.awt.Graphics;
+import java.awt.Image;
+import java.io.File;
 
 /**
  *
@@ -20,13 +23,14 @@ public class leJeu extends Jeu{
     private Jeu jeu ;
     private int score = 0;
     private int vie = 3;
+  
     
     public leJeu(int largeur, int hauteur, String title) {
         super(largeur, hauteur, title);
         vaisseau = new Vaisseau(this, "joueur", 0, 0);
         dessinerArrierePlan(this.getGraphics());
         creeObjets();
-        
+
     }
 
     @Override
@@ -54,6 +58,7 @@ public class leJeu extends Jeu{
         grphcs.drawString("Score : ", 400, 15);
         String sScore = ""+score;
         grphcs.drawString(sScore, 448, 15);
+        
     }
 
     @Override
@@ -75,5 +80,5 @@ public class leJeu extends Jeu{
     protected boolean aPerdu() {
        return false ; 
     }
-    
+
 }

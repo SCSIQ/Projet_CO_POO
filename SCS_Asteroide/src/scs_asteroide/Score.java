@@ -5,10 +5,37 @@
  */
 package scs_asteroide;
 
+import iut.Jeu;
+import iut.Objet;
+
 /**
  *
- * @author emili
+ * @author emilie
  */
-public class Score {
+public class Score extends iut.Objet {
+
+    public Score(Jeu g, int val) {
+        super(g, String.valueOf(val), 10, 10);
+    }
+
+    @Override
+    public boolean testerCollision(Objet objet) {
+        return false ; 
+    }
+
+    @Override
+    public void effetCollision(Objet objet) {
+       
+    }
+
+    @Override
+    public String getTypeObjet() {
+        return "Score"; 
+    }
+
+    @Override
+    public void evoluer(long l) {
+       
+    }
     
 }
