@@ -25,7 +25,7 @@ public class PetitAsteroide extends Asteroide {
 
     @Override
     public String getTypeObjet() {
-        return "Petit asteroid" ; 
+        return "Petit asteroide" ; 
     }
     
 }
