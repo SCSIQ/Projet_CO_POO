@@ -33,7 +33,7 @@ public class PetitAsteroide extends Asteroide {
         }else if(objet.getTypeObjet()=="tir"){
             leJeu().supprimer(this);
             
-        }else if(objet.getTypeObjet()=="vaisseau"){
+        }else if(objet.getTypeObjet()=="Vaisseau"){
             leJeu().supprimer(this);
         }
     }

@@ -38,6 +38,8 @@ public class MoyenAsteroide extends Asteroide {
              this.leJeu().ajouter(a1);
              this.leJeu().ajouter(a2);
              this.leJeu().ajouter(a3);
+        }else if(objet.getTypeObjet()=="Vaisseau"){
+            leJeu().supprimer(this);
         }
     }
 

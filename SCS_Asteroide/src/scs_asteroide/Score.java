@@ -46,7 +46,7 @@ public class Score extends iut.Objet {
         return score;
     }
 
-    public void setScore(int score) {
+    public void ajouterScore(int score) {
         this.score += score;
     }
     
