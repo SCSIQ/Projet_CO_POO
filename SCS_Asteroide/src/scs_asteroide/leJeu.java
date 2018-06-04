@@ -90,7 +90,7 @@ public class leJeu extends Jeu{
         boolean res = false ; 
         if(vaisseau.getVie() == 0){
             res= true ; 
-            perdu() ; 
+            
         }
        return res; 
     }

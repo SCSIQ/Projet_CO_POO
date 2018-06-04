@@ -38,8 +38,6 @@ public abstract class Asteroide extends ObjetTouchable{
 
         this.deplacerDA(l*vitesse, angle);
 
-       this.deplacerDA(l*vitesse, angle);
-
 
     }
 
