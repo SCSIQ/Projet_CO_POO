@@ -25,11 +25,8 @@ public class leJeu extends Jeu{
 
     //ATTRIBUTS 
     private Vaisseau vaisseau = null;
-
+    private Score score = null;
     
-   
-    private int score = 0;
-
     public leJeu(int largeur, int hauteur, String title) {
         super(largeur, hauteur, title);  
         vaisseau = new Vaisseau(this, "fusee", 10, 10);
@@ -62,9 +59,13 @@ public class leJeu extends Jeu{
         grphcs.setColor(Color.black);
         grphcs.fillRect(0, 0, 800, 800);
         grphcs.setColor(Color.white);
+        /*
         grphcs.drawString("Score : ", 400, 15);
         String sScore = ""+score;
         grphcs.drawString(sScore, 448, 15);
+        */
+        score = new Score(this, WIDTH);
+        this.ajouter(score);
    
     }
 
@@ -93,8 +94,8 @@ public class leJeu extends Jeu{
        return res; 
     }
 
-    public void ajouterScore(int score) {
-        this.score += score;
+    public void ajouterScore(int _score) {
+        this.score.ajouterScore(_score);
     }
 
 }

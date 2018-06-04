@@ -7,6 +7,7 @@ package scs_asteroide;
 
 import iut.Jeu;
 import iut.Objet;
+import java.awt.Graphics;
 
 /**
  *
@@ -14,13 +15,16 @@ import iut.Objet;
  */
 public class Score extends iut.Objet {
 
-        //ATTRIBUTS 
     private int score= 0; 
-
-   
-    
+ 
     public Score(Jeu g, int val) {
-        super(g, String.valueOf(val), 10, 10);
+        super(g, String.valueOf(val), 0, 0);
+    }
+    
+    public void dessiner(Graphics g){
+        g.drawString("Score : ", 400, 15);
+        String sScore = ""+score;
+        g.drawString(sScore, 448, 15);
     }
 
     @Override
