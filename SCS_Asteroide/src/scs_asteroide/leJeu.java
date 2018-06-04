@@ -24,17 +24,20 @@ public class leJeu extends Jeu{
 
     //ATTRIBUTS 
     private Vaisseau vaisseau = null;
-    private Vie vieJoueur = null;
+    
     private Jeu jeu ;
     private int score = 0;
 
     public leJeu(int largeur, int hauteur, String title) {
-        super(largeur, hauteur, title);         
+        super(largeur, hauteur, title);  
+        vaisseau = new Vaisseau(this, "fusee", 10, 10);
     }
 
     @Override
     protected void creeObjets() {
-        vaisseau = new Vaisseau(this, "fusee", 10, 10);
+        
+        
+        
         this.ajouteEcouteurClavier(vaisseau);
         this.ajouter(vaisseau);
         
@@ -57,8 +60,8 @@ public class leJeu extends Jeu{
 
 
         
-        vieJoueur = new Vie(this, "trois_coeur", 675, 10);
-        this.ajouter(vieJoueur);
+        
+        
 
        
        
