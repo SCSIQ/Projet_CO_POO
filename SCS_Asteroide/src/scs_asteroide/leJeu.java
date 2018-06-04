@@ -34,7 +34,7 @@ public class leJeu extends Jeu{
 
     @Override
     protected void creeObjets() {
-        vaisseau = new Vaisseau(this, "fusee", 0, 0);
+        vaisseau = new Vaisseau(this, "fusee", 10, 10);
         this.ajouteEcouteurClavier(vaisseau);
         this.ajouter(vaisseau);
         
