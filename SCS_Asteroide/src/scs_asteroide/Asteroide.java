@@ -36,14 +36,10 @@ public abstract class Asteroide extends ObjetTouchable{
     @Override
     public void evoluer(long l) {
         
-<<<<<<< HEAD
        // this.deplacerDA(l*vitesse, angle);
-=======
-       //this.deplacerDA(l*vitesse, angle);
->>>>>>> 071a0d4360c9961aca5c8ec280bea4959933304b
+
+    
     }
-    
-    
     
     
 }
