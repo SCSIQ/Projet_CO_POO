@@ -22,9 +22,11 @@ public class Vie extends iut.Objet {
     }
     
     public void enleverVie(){
+        System.out.println("vie avant impact : "+vieRestante);
         if(vieRestante > 0){
             vieRestante = vieRestante-1;
         }
+        System.out.println("vie après impact : "+vieRestante);
         if(vieRestante == 2){
             this.changeSprite("un_coeur");
         }
