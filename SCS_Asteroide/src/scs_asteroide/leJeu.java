@@ -22,7 +22,7 @@ public class leJeu extends Jeu{
 
     //ATTRIBUTS 
     private Vaisseau vaisseau;
-    private GrandAsteroide ga;
+ 
     private Jeu jeu ;
     private int score = 0;
     private int vie = 3;
@@ -34,7 +34,7 @@ public class leJeu extends Jeu{
         super(largeur, hauteur, title);
         vaisseau = new Vaisseau(this, "joueur", 0, 0);
         dessinerArrierePlan(this.getGraphics());
-         ga= new GrandAsteroide(this,"gros_asteroide",10,10);
+        
         creeObjets();
         
        
@@ -45,7 +45,7 @@ public class leJeu extends Jeu{
     protected void creeObjets() {
         vaisseau.dessiner(this.getGraphics(),10,10);
         
-        PetitAsteroide comete = new PetitAsteroide(jeu ,"comete",20,20 ); 
+        PetitAsteroide comete = new PetitAsteroide(jeu ,"gros_asteroide",20,20 ); 
 
         
         for(int i=1;i<6;i++){

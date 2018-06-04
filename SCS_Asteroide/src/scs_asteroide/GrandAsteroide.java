@@ -13,15 +13,20 @@ import iut.Objet;
  * @author emili
  */
 public class GrandAsteroide extends Asteroide {
+  
 
     public GrandAsteroide(Jeu g, String nom, int x, int y) {
         super(g, nom, x, y);
-       
+      
     }
 
     @Override
     public void effetCollision(Objet objet) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        if (objet.getTypeObjet()=="Tir"){
+            MoyenAsteroide ma1 = new MoyenAsteroide(this.leJeu(),"moyen_asteroide",10,10);
+            MoyenAsteroide ma2 = new MoyenAsteroide(this.leJeu(),"moyen_asteroide",10,10);
+            
+        }
     }
 
     @Override
