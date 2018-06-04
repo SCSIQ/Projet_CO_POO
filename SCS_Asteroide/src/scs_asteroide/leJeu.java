@@ -38,9 +38,9 @@ public class leJeu extends Jeu{
         this.ajouteEcouteurClavier(vaisseau);
         this.ajouter(vaisseau);
         
-        PetitAsteroide comete = new PetitAsteroide(jeu ,"gros_asteroide",20,20 ); 
+        GrandAsteroide comete = new GrandAsteroide(this ,"gros_asteroide",0,0 ); 
 
-        
+       // this.ajouter(comete);
         //for(int i=1;i<6;i++){
         //PetitAsteroide comete = new PetitAsteroide(jeu ,"comete",20,20 ); 
         /*for(int i=1;i<6;i++){
