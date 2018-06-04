@@ -7,6 +7,7 @@ package scs_asteroide;
 
 import iut.Jeu;
 import iut.Objet;
+import java.awt.Color;
 import java.awt.Graphics;
 
 /**
@@ -22,6 +23,10 @@ public class Score extends iut.Objet {
     }
     
     public void dessiner(Graphics g){
+        g.clearRect(395, 0, 100, 20);
+        g.setColor(Color.black);
+        g.fillRect(395, 0, 100, 20);
+        g.setColor(Color.white);
         g.drawString("Score : ", 400, 15);
         String sScore = ""+score;
         g.drawString(sScore, 448, 15);
