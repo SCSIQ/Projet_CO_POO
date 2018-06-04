@@ -20,6 +20,7 @@ import java.awt.event.KeyListener;
  */
 public class Vaisseau extends ObjetTouchable implements KeyListener {
     
+
     public Vaisseau(Jeu g, String nom, int x, int y) {
         super(g, nom, x, y);
     }
@@ -57,10 +58,13 @@ public class Vaisseau extends ObjetTouchable implements KeyListener {
                     this.deplacerXY(0, +10);
                 break; 
             case KeyEvent.VK_SPACE:
-                if (this.)
-                        break ; 
+                if (this.posDroite()<this.leJeu().largeur()){
+                Tir t = new Tir(this.leJeu(), "tir", 10, 10) ; 
+                leJeu().ajouter(t); 
+            }
+                        break ;    
         }
-            
+         
             //KeyEvent.VK_Z;
     }
 
