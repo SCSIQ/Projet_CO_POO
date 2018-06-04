@@ -26,31 +26,24 @@ public class Tir extends ObjetTouchable {
     @Override
     public void effetCollision(Objet objet) {
          if (objet!=this){
-               if(objet.getTypeObjet()=="GrosAsteroide"){
+               if(objet.getTypeObjet()=="Grand asteroide"){
                    
-                   MoyenAsteroide ma1 = new MoyenAsteroide(leJeu(),"ast1",20,20);
-                   MoyenAsteroide ma2 = new MoyenAsteroide(leJeu(),"ast2",20,20);
-                   this.leJeu().mourir();
+                   leJeu().supprimer(this); 
                    
                    
                }
-               if(objet.getTypeObjet()=="MoyenAsteroide"){
-                   PetitAsteroide pa1 = new PetitAsteroide(leJeu(),"ast1",10,10);
-                   PetitAsteroide pa2 = new PetitAsteroide(leJeu(),"ast2",10,10);
-                   PetitAsteroide pa3 = new PetitAsteroide(leJeu(),"ast3",10,10);
-                   PetitAsteroide pa4 = new PetitAsteroide(leJeu(),"ast4",10,10);
-                   this.leJeu().mourir();
-                   
+               if(objet.getTypeObjet()=="Moyen asteroide"){
+                    leJeu().supprimer(this); 
                    
                }
-               if(objet.getTypeObjet()=="PetitAsteroide"){
+               if(objet.getTypeObjet()=="Petit asteroide"){
                    
-                   this.leJeu().mourir();
+                    leJeu().supprimer(this); 
                    
                }
                if(objet.getTypeObjet()=="Vaisseau"){
                    
-                   this.leJeu().mourir();
+                   leJeu().supprimer(this); 
                }
            }
     }
