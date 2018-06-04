@@ -6,6 +6,7 @@
 package scs_asteroide;
 
 import iut.Jeu;
+import java.awt.Color;
 import java.awt.Graphics;
 
 /**
@@ -17,6 +18,8 @@ public class leJeu extends Jeu{
     //ATTRIBUTS 
     private Vaisseau vaisseau;
     private Jeu jeu ;
+    private int score = 0;
+    private int vie = 3;
     
     public leJeu(int largeur, int hauteur, String title) {
         super(largeur, hauteur, title);
@@ -40,7 +43,17 @@ public class leJeu extends Jeu{
 
     @Override
     protected void dessinerArrierePlan(Graphics grphcs) {
-       
+        grphcs.setColor(Color.black);
+        grphcs.fillRect(0, 0, 500, 500);
+        grphcs.fillRect(0, 0, 500, 500);
+        grphcs.fillRect(0, 0, 500, 500);
+        grphcs.setColor(Color.white);
+        grphcs.drawString("Vies : ", 300, 15);
+        String sVie = ""+vie;
+        grphcs.drawString(sVie, 338, 15);
+        grphcs.drawString("Score : ", 400, 15);
+        String sScore = ""+score;
+        grphcs.drawString(sScore, 448, 15);
     }
 
     @Override
