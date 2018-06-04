@@ -53,7 +53,8 @@ public class leJeu extends Jeu{
         this.ajouter(pa2);        
         this.ajouter(ma);        
         this.ajouter(ga);
-
+       
+genererAsteroide() ; 
 
     }
 
@@ -95,6 +96,20 @@ public class leJeu extends Jeu{
 
     public void setScore(int score) {
         this.score = score;
+    }
+    
+    public void genererAsteroide(){
+        
+      while(this.aPerdu())  {
+        GrandAsteroide ga = new GrandAsteroide(this ,"grosA",600,300 ); 
+        
+        MoyenAsteroide ma = new MoyenAsteroide(this ,"moyen_asteroide",500,600 ); 
+        PetitAsteroide pa = new PetitAsteroide(this,"petit_asteroide",600,100);
+        
+        this.ajouter(pa);           
+        this.ajouter(ma);        
+        this.ajouter(ga);
+    }
     }
 
 }
