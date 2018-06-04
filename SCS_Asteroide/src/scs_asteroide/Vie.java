@@ -58,6 +58,10 @@ public class Vie extends iut.Objet {
     public void evoluer(long l) {
     }
 
+    public int getVieRestante() {
+        return vieRestante;
+    }
 
+    
 
 }
