@@ -50,8 +50,6 @@ public class leJeu extends Jeu{
         this.ajouter(pa2);        
         this.ajouter(ma);        
         this.ajouter(ga);
-        
-
 
         
         vieJoueur = new Vie(this, "trois_coeur", 675, 10);

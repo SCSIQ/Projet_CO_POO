@@ -20,7 +20,16 @@ public class PetitAsteroide extends Asteroide {
 
     @Override
     public void effetCollision(Objet objet) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        if (objet.getTypeObjet()=="Moyen asteroide"){
+            
+        }else if (objet.getTypeObjet()=="Grand asteroide"){
+            
+        }
+        else if (objet.getTypeObjet()=="Petit asteroide"){
+            
+        }else if(objet.getTypeObjet()=="tir"){
+            
+        }
     }
 
     @Override
