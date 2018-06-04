@@ -43,7 +43,7 @@ public class leJeu extends Jeu{
         PetitAsteroide pa = new PetitAsteroide(this,"petit_asteroide",200,100);
         
         this.ajouter(pa);
-        //this.ajouter(ga);
+        //this.ajouter(ma);
         //for(int i=1;i<6;i++){
         //PetitAsteroide comete = new PetitAsteroide(jeu ,"comete",20,20 ); 
         /*for(int i=1;i<6;i++){

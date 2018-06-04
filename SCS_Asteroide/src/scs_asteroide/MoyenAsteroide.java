@@ -20,12 +20,8 @@ public class MoyenAsteroide extends Asteroide {
 
     @Override
     public void effetCollision(Objet objet) {
-        if (objet.getTypeObjet()=="Tir" ){
-        //PetitAsteroide pa1 = new PetitAsteroide(this.leJeu(),"petit_asteroide", 5, 5); }
-        //PetitAsteroide pa2 = new PetitAsteroide(this.leJeu(),"petit_asteroide", 10, 10);
-        //
-        //PetitAsteroide pa3 = new PetitAsteroide(this.leJeu(),"petit_asteroide", 15, 15);
-    }}
+       
+    }
 
     @Override
     public String getTypeObjet() {
