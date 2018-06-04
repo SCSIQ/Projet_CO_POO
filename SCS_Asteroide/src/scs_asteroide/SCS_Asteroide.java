@@ -33,6 +33,7 @@ public class SCS_Asteroide {
        
         Jeu jeuAsteroid = new leJeu(500, 500, "Asteroid");
         jeuAsteroid.jouer();
+
    
         }
        
