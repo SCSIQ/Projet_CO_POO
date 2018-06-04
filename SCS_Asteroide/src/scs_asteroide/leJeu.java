@@ -48,14 +48,13 @@ public class leJeu extends Jeu{
         PetitAsteroide pa = new PetitAsteroide(this,"petit_asteroide",600,100);
         PetitAsteroide pa2 = new PetitAsteroide(this,"petit_asteroide",600,400);
         
-    while(this.aPerdu()==false){
-              
-    }
-            this.ajouter(pa);        
+     
+           this.ajouter(pa);        
             this.ajouter(pa2);        
             this.ajouter(ma);        
-            this.ajouter(ga);
-        
+            this.ajouter(ga);   
+       
+           
      
        
     }
@@ -89,8 +88,9 @@ public class leJeu extends Jeu{
     @Override
     protected boolean aPerdu() {
         boolean res = false ; 
-        if(getVieRestante() == 0){
+        if(vaisseau.getVie() == 0){
             res= true ; 
+            perdu() ; 
         }
        return res; 
     }
