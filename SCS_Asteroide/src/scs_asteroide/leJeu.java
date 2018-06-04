@@ -25,7 +25,7 @@ public class leJeu extends Jeu{
     //ATTRIBUTS 
     private Vaisseau vaisseau = null;
     
-    private Jeu jeu ;
+   
     private int score = 0;
 
     public leJeu(int largeur, int hauteur, String title) {
@@ -47,16 +47,15 @@ public class leJeu extends Jeu{
         PetitAsteroide pa = new PetitAsteroide(this,"petit_asteroide",600,100);
         PetitAsteroide pa2 = new PetitAsteroide(this,"petit_asteroide",600,400);
         
-        this.ajouter(pa);        
-        this.ajouter(pa2);        
-        this.ajouter(ma);        
-        this.ajouter(ga);
-
+    while(this.aPerdu()==false){
+              
+    }
+            this.ajouter(pa);        
+            this.ajouter(pa2);        
+            this.ajouter(ma);        
+            this.ajouter(ga);
         
-        
-        
-
-       
+     
        
     }
 
