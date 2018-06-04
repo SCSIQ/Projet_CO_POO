@@ -11,6 +11,7 @@ import java.awt.Color;
 import java.awt.Graphics;
 import java.awt.Image;
 import java.io.File;
+import javax.swing.JOptionPane;
 
 
 
@@ -73,7 +74,7 @@ public class leJeu extends Jeu{
 
     @Override
     protected void perdu() {
-       
+      JOptionPane.showMessageDialog(this, "Vous avez perdu");
     }
 
     @Override
