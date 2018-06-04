@@ -36,9 +36,7 @@ public class leJeu extends Jeu{
 
     @Override
     protected void creeObjets() {
-        
-        
-        
+                
         this.ajouteEcouteurClavier(vaisseau);
         this.ajouter(vaisseau);
         

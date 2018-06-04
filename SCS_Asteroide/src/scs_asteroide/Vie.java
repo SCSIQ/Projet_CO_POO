@@ -33,6 +33,7 @@ public class Vie extends iut.Objet {
         }
         if(vieRestante == 0){
             //coder fin du jeu car le joueur a perdu
+            
         }
         
         
