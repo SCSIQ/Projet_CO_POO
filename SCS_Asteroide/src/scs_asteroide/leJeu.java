@@ -37,11 +37,7 @@ public class leJeu extends Jeu{
 
     @Override
     protected void creeObjets() {
-<<<<<<< HEAD
-       
-=======
-                
->>>>>>> 7555813615dc314282e83103ace0be367e6ed92b
+
         this.ajouteEcouteurClavier(vaisseau);
         this.ajouter(vaisseau);
         
@@ -51,25 +47,14 @@ public class leJeu extends Jeu{
         PetitAsteroide pa = new PetitAsteroide(this,"petit_asteroide",600,100);
         PetitAsteroide pa2 = new PetitAsteroide(this,"petit_asteroide",600,400);
         
-<<<<<<< HEAD
-        this.ajouter(pa);        
-        this.ajouter(pa2);        
-        this.ajouter(ma);        
-        this.ajouter(ga);
-        
-        
-      
-=======
+
      
            this.ajouter(pa);        
             this.ajouter(pa2);        
             this.ajouter(ma);        
             this.ajouter(ga);   
        
-           
-     
-       
->>>>>>> 7555813615dc314282e83103ace0be367e6ed92b
+         
     }
 
     @Override
