@@ -26,28 +26,33 @@ public class Vie extends iut.Objet {
         }
         if(vieRestante == 0){
             //coder fin du jeu car le joueur a perdu
+        }else if(vieRestante == 1){
+            this.changeSprite("un_coeur");
+        }else if(vieRestante == 1){
+            this.changeSprite("deux_coeur");
         }
+        
     }
 
 
     @Override
     public String getTypeObjet() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        return "";
     }
 
     @Override
     public void evoluer(long l) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        
     }
 
     @Override
     public boolean testerCollision(Objet objet) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        return false;
     }
 
     @Override
     public void effetCollision(Objet objet) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        
     }
     
 }

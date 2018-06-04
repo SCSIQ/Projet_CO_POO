@@ -42,7 +42,7 @@ public class leJeu extends Jeu{
         
         MoyenAsteroide ma = new MoyenAsteroide(this ,"moyen_asteroide",400,600 ); 
         
-        
+            
         PetitAsteroide pa = new PetitAsteroide(this,"petit_asteroide",200,100);
         PetitAsteroide pa2 = new PetitAsteroide(this,"petit_asteroide",400,400);
         
@@ -52,8 +52,8 @@ public class leJeu extends Jeu{
         this.ajouter(ga);
         
         
-        Vie v = new Vie(this, "trois_coeur", 400, 400);
-        //this.ajouter(v);
+        Vie v = new Vie(this, "trois_coeur", 675, 10);
+        this.ajouter(v);
        
     }
 
