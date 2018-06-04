@@ -23,9 +23,12 @@ public class GrandAsteroide extends Asteroide {
     @Override
     public void effetCollision(Objet objet) {
         if(objet.getTypeObjet()=="tir"){
-            MoyenAsteroide ma = new MoyenAsteroide(this.leJeu(),"moyen_asteroide",objet.milieuX()-100,objet.milieuY());            
-            //leJeu().ajouter(ma);
-           this.changeSprite("moyen_asteroide");
+           leJeu().supprimer(this);
+           MoyenAsteroide ma = new MoyenAsteroide(this.leJeu(),"moyen_asteroide",objet.milieuX()-100,objet.milieuY());            
+           leJeu().ajouter(ma);
+           MoyenAsteroide ma1 = new MoyenAsteroide(this.leJeu(),"moyen_asteroide",objet.milieuX()+250,objet.milieuY());            
+           leJeu().ajouter(ma1);
+          
         }else if (objet.getTypeObjet()=="Moyen asteroide"){
             
         }

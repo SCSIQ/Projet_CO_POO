@@ -7,6 +7,8 @@ package scs_asteroide;
 
 import iut.Jeu;
 import iut.Objet;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 /**
  *
@@ -28,7 +30,7 @@ public class PetitAsteroide extends Asteroide {
         else if (objet.getTypeObjet()=="Petit asteroide"){
             
         }else if(objet.getTypeObjet()=="tir"){
-            
+            leJeu().supprimer(this);
         }
     }
 
