@@ -29,24 +29,12 @@ public class Vie extends iut.Objet {
             //coder fin du jeu car le joueur a perdu
         }else if(vieRestante == 1){
             this.changeSprite("un_coeur");
-        }else if(vieRestante == 1){
+        }else if(vieRestante == 2){
             this.changeSprite("deux_coeur");
         }
         
     }
     
-    public void keyPressed(KeyEvent ke) {
-        switch(ke.getKeyCode()){
-            case KeyEvent.VK_V:
-                this.enleverVie();
-                break;
-            
-            }        
-
-        }
-         
-            //KeyEvent.VK_Z;
-
     @Override
     public boolean testerCollision(Objet objet) {
         return false;
