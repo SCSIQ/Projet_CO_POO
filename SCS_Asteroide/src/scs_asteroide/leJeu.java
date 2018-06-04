@@ -46,10 +46,11 @@ public class leJeu extends Jeu{
         PetitAsteroide pa = new PetitAsteroide(this,"petit_asteroide",200,100);
         PetitAsteroide pa2 = new PetitAsteroide(this,"petit_asteroide",400,400);
         
-        this.ajouter(pa);
-        this.ajouter(pa2);
-        this.ajouter(ma);
+        this.ajouter(pa);        
+        this.ajouter(pa2);        
+        this.ajouter(ma);        
         this.ajouter(ga);
+       
        
     }
 

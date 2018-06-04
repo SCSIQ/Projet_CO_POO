@@ -57,7 +57,7 @@ public class Vaisseau extends ObjetTouchable implements KeyListener {
                     this.deplacerXY(0, +10);
                 break; 
             case KeyEvent.VK_SPACE:
-                if (this.)
+               // if (this.)
                         break ; 
         }
             
