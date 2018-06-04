@@ -23,15 +23,19 @@ public class Vie extends iut.Objet {
     
     public void enleverVie(){
         if(vieRestante > 0){
-            vieRestante --;
+            vieRestante = vieRestante-1;
+        }
+        if(vieRestante == 2){
+            this.changeSprite("un_coeur");
+        }
+        if(vieRestante == 1){
+            this.changeSprite("deux_coeur");
         }
         if(vieRestante == 0){
             //coder fin du jeu car le joueur a perdu
-        }else if(vieRestante == 1){
-            this.changeSprite("un_coeur");
-        }else if(vieRestante == 2){
-            this.changeSprite("deux_coeur");
         }
+        
+        
         
     }
     
