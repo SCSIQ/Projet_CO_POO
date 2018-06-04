@@ -17,7 +17,7 @@ public class Tir extends ObjetTouchable {
 
     //ATTRIBUTS 
     private double angle=0 ; 
-    private double vitesse=0.2;
+    private double vitesse=0.5;
     
     public Tir(Jeu g, String nom, int x, int y) {
         super(g, nom, x, y);
@@ -25,7 +25,34 @@ public class Tir extends ObjetTouchable {
 
     @Override
     public void effetCollision(Objet objet) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+         if (objet!=this){
+               if(objet.getTypeObjet()=="GrosAsteroide"){
+                   
+                   MoyenAsteroide ma1 = new MoyenAsteroide(leJeu(),"ast1",20,20);
+                   MoyenAsteroide ma2 = new MoyenAsteroide(leJeu(),"ast2",20,20);
+                   this.leJeu().mourir();
+                   
+                   
+               }
+               if(objet.getTypeObjet()=="MoyenAsteroide"){
+                   PetitAsteroide pa1 = new PetitAsteroide(leJeu(),"ast1",10,10);
+                   PetitAsteroide pa2 = new PetitAsteroide(leJeu(),"ast2",10,10);
+                   PetitAsteroide pa3 = new PetitAsteroide(leJeu(),"ast3",10,10);
+                   PetitAsteroide pa4 = new PetitAsteroide(leJeu(),"ast4",10,10);
+                   this.leJeu().mourir();
+                   
+                   
+               }
+               if(objet.getTypeObjet()=="PetitAsteroide"){
+                   
+                   this.leJeu().mourir();
+                   
+               }
+               if(objet.getTypeObjet()=="Vaisseau"){
+                   
+                   this.leJeu().mourir();
+               }
+           }
     }
 
     @Override
