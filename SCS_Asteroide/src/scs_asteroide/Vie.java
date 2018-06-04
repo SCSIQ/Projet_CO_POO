@@ -22,16 +22,15 @@ public class Vie extends iut.Objet {
     }
     
     public void enleverVie(){
-        System.out.println("vie avant impact : "+vieRestante);
         if(vieRestante > 0){
             vieRestante = vieRestante-1;
         }
         System.out.println("vie après impact : "+vieRestante);
         if(vieRestante == 2){
-            this.changeSprite("un_coeur");
+            this.changeSprite("deux_coeur");
         }
         if(vieRestante == 1){
-            this.changeSprite("deux_coeur");
+            this.changeSprite("un_coeur");
         }
         if(vieRestante == 0){
             //coder fin du jeu car le joueur a perdu
