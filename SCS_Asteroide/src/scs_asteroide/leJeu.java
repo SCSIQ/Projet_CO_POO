@@ -40,8 +40,9 @@ public class leJeu extends Jeu{
         
         GrandAsteroide ga = new GrandAsteroide(this ,"grosA",20,0 ); 
         MoyenAsteroide ma = new MoyenAsteroide(this ,"moyen_asteroide",0,0 ); 
-
-       // this.ajouter(ma);
+        PetitAsteroide pa = new PetitAsteroide(this,"petit_asteroide",200,100);
+        
+        this.ajouter(pa);
         //this.ajouter(ga);
         //for(int i=1;i<6;i++){
         //PetitAsteroide comete = new PetitAsteroide(jeu ,"comete",20,20 ); 
