@@ -38,9 +38,11 @@ public class leJeu extends Jeu{
         this.ajouteEcouteurClavier(vaisseau);
         this.ajouter(vaisseau);
         
-        GrandAsteroide comete = new GrandAsteroide(this ,"gros_asteroide",0,0 ); 
+        GrandAsteroide ga = new GrandAsteroide(this ,"grosA",20,0 ); 
+        MoyenAsteroide ma = new MoyenAsteroide(this ,"moyen_asteroide",0,0 ); 
 
-       // this.ajouter(comete);
+        this.ajouter(ma);
+        //this.ajouter(ga);
         //for(int i=1;i<6;i++){
         //PetitAsteroide comete = new PetitAsteroide(jeu ,"comete",20,20 ); 
         /*for(int i=1;i<6;i++){
@@ -51,7 +53,7 @@ public class leJeu extends Jeu{
     @Override
     protected void dessinerArrierePlan(Graphics grphcs) {
         grphcs.setColor(Color.black);
-        grphcs.fillRect(0, 0, 500, 500);
+        grphcs.fillRect(0, 0, 800, 800);
         grphcs.setColor(Color.white);
         grphcs.drawString("Vies : ", 300, 15);
         String sVie = ""+vie;
