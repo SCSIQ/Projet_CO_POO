@@ -17,7 +17,7 @@ public class Tir extends ObjetTouchable {
 
     //ATTRIBUTS 
     private double angle=0 ; 
-    private double vitesse=0.2;
+    private double vitesse=0.5;
     
     public Tir(Jeu g, String nom, int x, int y) {
         super(g, nom, x, y);
