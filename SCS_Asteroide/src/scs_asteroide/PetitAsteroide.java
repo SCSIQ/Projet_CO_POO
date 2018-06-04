@@ -15,9 +15,10 @@ import java.util.logging.Logger;
  * @author emili
  */
 public class PetitAsteroide extends Asteroide {
-
+  
     public PetitAsteroide(Jeu g, String nom, int x, int y) {
         super(g, nom, x, y);
+        
     }
 
     @Override
@@ -30,6 +31,9 @@ public class PetitAsteroide extends Asteroide {
         else if (objet.getTypeObjet()=="Petit asteroide"){
             
         }else if(objet.getTypeObjet()=="tir"){
+            leJeu().supprimer(this);
+            
+        }else if(objet.getTypeObjet()=="vaisseau"){
             leJeu().supprimer(this);
         }
     }

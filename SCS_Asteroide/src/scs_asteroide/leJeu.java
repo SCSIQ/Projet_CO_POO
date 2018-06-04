@@ -12,6 +12,7 @@ import java.awt.Graphics;
 import java.awt.Image;
 import java.io.File;
 import javax.swing.JOptionPane;
+import static jdk.nashorn.internal.objects.NativeMath.random;
 
 
 
@@ -35,17 +36,13 @@ public class leJeu extends Jeu{
 
     @Override
     protected void creeObjets() {
-        
-        
-        
+       
         this.ajouteEcouteurClavier(vaisseau);
         this.ajouter(vaisseau);
         
         GrandAsteroide ga = new GrandAsteroide(this ,"grosA",600,300 ); 
         
         MoyenAsteroide ma = new MoyenAsteroide(this ,"moyen_asteroide",500,600 ); 
-        
-            
         PetitAsteroide pa = new PetitAsteroide(this,"petit_asteroide",600,100);
         PetitAsteroide pa2 = new PetitAsteroide(this,"petit_asteroide",600,400);
         
@@ -53,13 +50,9 @@ public class leJeu extends Jeu{
         this.ajouter(pa2);        
         this.ajouter(ma);        
         this.ajouter(ga);
-
         
         
-        
-
-       
-       
+      
     }
 
     @Override

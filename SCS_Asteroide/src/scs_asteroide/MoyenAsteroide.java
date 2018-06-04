@@ -24,17 +24,20 @@ public class MoyenAsteroide extends Asteroide {
             
         }else if (objet.getTypeObjet()=="Grand asteroide"){
             
-        }
-        else if (objet.getTypeObjet()=="Petit asteroide"){
+        }else if (objet.getTypeObjet()=="Petit asteroide"){
             
         }if(objet.getTypeObjet()=="tir"){
-            this.changeSprite("petit_asteroide");
+            
+             PetitAsteroide a1= new PetitAsteroide(leJeu(),"petit_asteroide",this.milieuX(),this.milieuY());
+             PetitAsteroide a2= new PetitAsteroide(leJeu(),"petit_asteroide",this.milieuX()+10,this.milieuY());
+             PetitAsteroide a3= new PetitAsteroide(leJeu(),"petit_asteroide",this.milieuX()-10,this.milieuY());
              leJeu().supprimer(this);
-             PetitAsteroide a1= new PetitAsteroide(leJeu(),"petit_asteroide",150,150);
-             PetitAsteroide a2= new PetitAsteroide(leJeu(),"petit_asteroide",350,350);
+             
+             
              
              this.leJeu().ajouter(a1);
              this.leJeu().ajouter(a2);
+             this.leJeu().ajouter(a3);
         }
     }
 
