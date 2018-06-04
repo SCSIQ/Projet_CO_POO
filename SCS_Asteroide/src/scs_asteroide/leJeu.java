@@ -11,7 +11,7 @@ import java.awt.Color;
 import java.awt.Graphics;
 import java.awt.Image;
 import java.io.File;
-import java.io.IOException;
+
 
 
 /**
@@ -29,7 +29,7 @@ public class leJeu extends Jeu{
  
 
     
-    public leJeu(int largeur, int hauteur, String title) throws IOException {
+    public leJeu(int largeur, int hauteur, String title)  {
         super(largeur, hauteur, title);
         vaisseau = new Vaisseau(this, "joueur", 0, 0);
         dessinerArrierePlan(this.getGraphics());
