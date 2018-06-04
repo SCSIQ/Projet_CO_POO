@@ -81,5 +81,13 @@ public class Vaisseau extends ObjetTouchable implements KeyListener {
     
     }
     
+    public void finDuJeu(){
+        jeu.stopper();
+    }
+    
+    public int getVie(){
+        return vie.getVieRestante();
+    }
+    
   
 }

@@ -25,8 +25,9 @@ public class leJeu extends Jeu{
 
     //ATTRIBUTS 
     private Vaisseau vaisseau = null;
+
     
-    private Jeu jeu ;
+   
     private int score = 0;
 
     public leJeu(int largeur, int hauteur, String title) {
@@ -36,7 +37,11 @@ public class leJeu extends Jeu{
 
     @Override
     protected void creeObjets() {
+<<<<<<< HEAD
        
+=======
+                
+>>>>>>> 7555813615dc314282e83103ace0be367e6ed92b
         this.ajouteEcouteurClavier(vaisseau);
         this.ajouter(vaisseau);
         
@@ -46,6 +51,7 @@ public class leJeu extends Jeu{
         PetitAsteroide pa = new PetitAsteroide(this,"petit_asteroide",600,100);
         PetitAsteroide pa2 = new PetitAsteroide(this,"petit_asteroide",600,400);
         
+<<<<<<< HEAD
         this.ajouter(pa);        
         this.ajouter(pa2);        
         this.ajouter(ma);        
@@ -53,6 +59,17 @@ public class leJeu extends Jeu{
         
         
       
+=======
+     
+           this.ajouter(pa);        
+            this.ajouter(pa2);        
+            this.ajouter(ma);        
+            this.ajouter(ga);   
+       
+           
+     
+       
+>>>>>>> 7555813615dc314282e83103ace0be367e6ed92b
     }
 
     @Override
@@ -83,7 +100,12 @@ public class leJeu extends Jeu{
 
     @Override
     protected boolean aPerdu() {
-       return false ; 
+        boolean res = false ; 
+        if(vaisseau.getVie() == 0){
+            res= true ; 
+            
+        }
+       return res; 
     }
 
     public void setScore(int score) {
