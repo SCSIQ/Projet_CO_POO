@@ -18,7 +18,6 @@ public class leJeu extends Jeu{
 
     //ATTRIBUTS 
     private Vaisseau vaisseau = null;
-    private GrandAsteroide ga;
     private Jeu jeu ;
     private int score = 0;
     private int vie = 3;
@@ -28,8 +27,7 @@ public class leJeu extends Jeu{
     
 
     public leJeu(int largeur, int hauteur, String title) {
-        super(largeur, hauteur, title); 
-         ga= new GrandAsteroide(this,"gros_asteroide",10,10);
+        super(largeur, hauteur, title);         
     }
 
     @Override
