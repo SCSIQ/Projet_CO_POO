@@ -24,9 +24,9 @@ public class leJeu extends Jeu{
 
     //ATTRIBUTS 
     private Vaisseau vaisseau = null;
+    private Vie vieJoueur = null;
     private Jeu jeu ;
     private int score = 0;
-    private int vie = 3;
 
     public leJeu(int largeur, int hauteur, String title) {
         super(largeur, hauteur, title);         
@@ -50,15 +50,10 @@ public class leJeu extends Jeu{
         this.ajouter(pa2);        
         this.ajouter(ma);        
         this.ajouter(ga);
-        
-
-       // Vie v = new Vie(this, "trois_coeur", 400, 400);
-        //this.ajouter(v);
-
 
         
-        Vie v = new Vie(this, "trois_coeur", 675, 10);
-        this.ajouter(v);
+        vieJoueur = new Vie(this, "trois_coeur", 675, 10);
+        this.ajouter(vieJoueur);
 
        
        
@@ -69,9 +64,6 @@ public class leJeu extends Jeu{
         grphcs.setColor(Color.black);
         grphcs.fillRect(0, 0, 800, 800);
         grphcs.setColor(Color.white);
-        grphcs.drawString("Vies : ", 300, 15);
-        String sVie = ""+vie;
-        grphcs.drawString(sVie, 338, 15);
         grphcs.drawString("Score : ", 400, 15);
         String sScore = ""+score;
         grphcs.drawString(sScore, 448, 15);
@@ -102,8 +94,4 @@ public class leJeu extends Jeu{
         this.score = score;
     }
 
-    public void setVie(int vie) {
-        this.vie = vie;
-    }
-    
 }

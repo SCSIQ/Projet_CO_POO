@@ -20,14 +20,16 @@ import java.awt.event.KeyListener;
  */
 public class Vaisseau extends ObjetTouchable implements KeyListener {
     
+    private final Jeu jeu;
 
     public Vaisseau(Jeu g, String nom, int x, int y) {
         super(g, nom, x, y);
+        this.jeu = g;
     }
 
     @Override
     public void effetCollision(Objet objet) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        //jeu.getVieJoueur();
     }
 
     @Override
