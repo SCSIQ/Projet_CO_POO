@@ -55,7 +55,10 @@ public class Vaisseau extends ObjetTouchable implements KeyListener {
             case KeyEvent.VK_S:
                 if(this.posDroite()<this.leJeu().largeur())
                     this.deplacerXY(0, +10);
-                break;                                        
+                break; 
+            case KeyEvent.VK_SPACE:
+                if (this.)
+                        break ; 
         }
             
             //KeyEvent.VK_Z;
