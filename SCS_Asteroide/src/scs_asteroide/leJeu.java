@@ -38,18 +38,19 @@ public class leJeu extends Jeu{
         this.ajouteEcouteurClavier(vaisseau);
         this.ajouter(vaisseau);
         
-        GrandAsteroide ga = new GrandAsteroide(this ,"grosA",20,0 ); 
+        GrandAsteroide ga = new GrandAsteroide(this ,"grosA",200,300 ); 
         
-        MoyenAsteroide ma = new MoyenAsteroide(this ,"moyen_asteroide",0,0 ); 
+        MoyenAsteroide ma = new MoyenAsteroide(this ,"moyen_asteroide",400,600 ); 
+        
+        
         PetitAsteroide pa = new PetitAsteroide(this,"petit_asteroide",200,100);
+        PetitAsteroide pa2 = new PetitAsteroide(this,"petit_asteroide",400,400);
         
         this.ajouter(pa);
-        //this.ajouter(ma);
-        //for(int i=1;i<6;i++){
-        //PetitAsteroide comete = new PetitAsteroide(jeu ,"comete",20,20 ); 
-        /*for(int i=1;i<6;i++){
-            comete.dessiner(this.getGraphics());
-        }*/
+        this.ajouter(pa2);
+        this.ajouter(ma);
+        this.ajouter(ga);
+       
     }
 
     @Override

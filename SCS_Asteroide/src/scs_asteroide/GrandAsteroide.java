@@ -22,7 +22,8 @@ public class GrandAsteroide extends Asteroide {
 
     @Override
     public void effetCollision(Objet objet) {
-        
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    
     }
 
     @Override
