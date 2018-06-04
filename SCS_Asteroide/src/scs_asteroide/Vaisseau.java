@@ -19,14 +19,9 @@ import java.awt.event.KeyListener;
  * @author emili
  */
 public class Vaisseau extends ObjetTouchable implements KeyListener {
-
-    // ATTRIBUTS 
- //   private Jeu jeu ; 
-    
     
     public Vaisseau(Jeu g, String nom, int x, int y) {
         super(g, nom, x, y);
-   //     jeu= g ; 
     }
 
     @Override

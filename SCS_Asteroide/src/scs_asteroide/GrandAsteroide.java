@@ -16,6 +16,7 @@ public class GrandAsteroide extends Asteroide {
 
     public GrandAsteroide(Jeu g, String nom, int x, int y) {
         super(g, nom, x, y);
+       
     }
 
     @Override
@@ -25,7 +26,7 @@ public class GrandAsteroide extends Asteroide {
 
     @Override
     public String getTypeObjet() {
-        return " Grand asteroide" ; 
+        return "Grand asteroide" ; 
     }
     
 }

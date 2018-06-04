@@ -8,8 +8,7 @@ package scs_asteroide;
 import iut.Jeu;
 import java.awt.Color;
 import java.awt.Graphics;
-import java.awt.Image;
-import java.awt.Toolkit;
+
 
 /**
  *
@@ -19,11 +18,17 @@ public class leJeu extends Jeu{
 
     //ATTRIBUTS 
     private Vaisseau vaisseau = null;
+    private GrandAsteroide ga;
+    private Jeu jeu ;
     private int score = 0;
     private int vie = 3;
+
+ 
+
     
     public leJeu(int largeur, int hauteur, String title) {
         super(largeur, hauteur, title); 
+         ga= new GrandAsteroide(this,"gros_asteroide",10,10);
     }
 
     @Override
@@ -49,6 +54,7 @@ public class leJeu extends Jeu{
         grphcs.drawString("Score : ", 400, 15);
         String sScore = ""+score;
         grphcs.drawString(sScore, 448, 15);
+   
     }
 
     @Override
