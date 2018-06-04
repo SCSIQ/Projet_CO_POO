@@ -39,18 +39,7 @@ public class MoyenAsteroide extends Asteroide {
              this.leJeu().ajouter(a1);
              this.leJeu().ajouter(a2);
              this.leJeu().ajouter(a3);
-             
-              
-                int x = (int) (random(6)*100)+500;
-                int y = (int) (random(6)*100)+600;
-
-                MoyenAsteroide ma1 = new MoyenAsteroide(this.leJeu(),"moyen_asteroide",x,y);
-                GrandAsteroide ga1 = new GrandAsteroide(this.leJeu(),"grosA",x,y);
-                PetitAsteroide pa = new PetitAsteroide(this.leJeu(),"petit_asteroide",x,y);
-                leJeu().ajouter(pa);
-                leJeu().ajouter(ma1);
-                leJeu().ajouter(ga1);
-            
+       
              
         }else if(objet.getTypeObjet()=="Vaisseau"){
             leJeu().supprimer(this);
