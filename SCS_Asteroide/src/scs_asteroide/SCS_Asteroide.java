@@ -31,10 +31,8 @@ public class SCS_Asteroide {
         
         // TODO code application logic here
        
-      Jeu jeuAsteroid = new leJeu(500, 500, "Asteroid");
-        PetitAsteroide a = new PetitAsteroide(jeuAsteroid,"petit", 10, 10 ); 
-
-   	
+        Jeu jeuAsteroid = new leJeu(500, 500, "Asteroid");
+        jeuAsteroid.jouer();
    
         }
        
