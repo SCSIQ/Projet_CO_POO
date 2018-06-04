@@ -7,6 +7,7 @@ package scs_asteroide;
 
 import iut.Jeu;
 import iut.Objet;
+import java.awt.event.KeyEvent;
 
 /**
  *
@@ -33,17 +34,18 @@ public class Vie extends iut.Objet {
         }
         
     }
+    
+    public void keyPressed(KeyEvent ke) {
+        switch(ke.getKeyCode()){
+            case KeyEvent.VK_V:
+                this.enleverVie();
+                break;
+            
+            }        
 
-
-    @Override
-    public String getTypeObjet() {
-        return "";
-    }
-
-    @Override
-    public void evoluer(long l) {
-        
-    }
+        }
+         
+            //KeyEvent.VK_Z;
 
     @Override
     public boolean testerCollision(Objet objet) {
@@ -52,7 +54,17 @@ public class Vie extends iut.Objet {
 
     @Override
     public void effetCollision(Objet objet) {
-        
     }
-    
+
+    @Override
+    public String getTypeObjet() {
+        return "";
+    }
+
+    @Override
+    public void evoluer(long l) {
+    }
+
+
+
 }
