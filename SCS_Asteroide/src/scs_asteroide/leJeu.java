@@ -51,7 +51,7 @@ public class leJeu extends Jeu{
     @Override
     protected void dessinerArrierePlan(Graphics grphcs) {
         grphcs.setColor(Color.black);
-        grphcs.fillRect(0, 0, 500, 500);
+        grphcs.fillRect(0, 0, 800, 800);
         grphcs.setColor(Color.white);
         grphcs.drawString("Vies : ", 300, 15);
         String sVie = ""+vie;
