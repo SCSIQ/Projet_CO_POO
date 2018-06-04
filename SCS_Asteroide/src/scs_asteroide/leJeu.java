@@ -6,13 +6,15 @@
 package scs_asteroide;
 
 import iut.Jeu;
-import iut.Lutin;
 import java.awt.Color;
 import java.awt.Graphics;
+<<<<<<< HEAD
 import java.awt.Image;
 import java.io.File;
 import javax.swing.JOptionPane;
 
+=======
+>>>>>>> d0a7a99812f530339b384326e2f7606f89a58d6b
 
 
 /**
@@ -22,8 +24,13 @@ import javax.swing.JOptionPane;
 public class leJeu extends Jeu{
 
     //ATTRIBUTS 
+<<<<<<< HEAD
     private Vaisseau vaisseau;
+ 
+=======
+    private Vaisseau vaisseau = null;
     private GrandAsteroide ga;
+>>>>>>> fe2b730a7fbc3bbda1fe6d72c77c5cd8be6ca1fd
     private Jeu jeu ;
     private int score = 0;
     private int vie = 3;
@@ -31,34 +38,45 @@ public class leJeu extends Jeu{
  
 
     
+<<<<<<< HEAD
     public leJeu(int largeur, int hauteur, String title)  {
         super(largeur, hauteur, title);
         vaisseau = new Vaisseau(this, "joueur", 0, 0);
         dessinerArrierePlan(this.getGraphics());
-         ga= new GrandAsteroide(this,"gros_asteroide",10,10);
+        
         creeObjets();
         
        
 
+=======
+    public leJeu(int largeur, int hauteur, String title) {
+        super(largeur, hauteur, title); 
+         ga= new GrandAsteroide(this,"gros_asteroide",10,10);
+>>>>>>> fe2b730a7fbc3bbda1fe6d72c77c5cd8be6ca1fd
     }
 
     @Override
     protected void creeObjets() {
-        vaisseau.dessiner(this.getGraphics(),10,10);
+        vaisseau = new Vaisseau(this, "fusee", 0, 0);
+        this.ajouteEcouteurClavier(vaisseau);
+        this.ajouter(vaisseau);
         
-        PetitAsteroide comete = new PetitAsteroide(jeu ,"comete",20,20 ); 
+<<<<<<< HEAD
+        PetitAsteroide comete = new PetitAsteroide(jeu ,"gros_asteroide",20,20 ); 
 
         
         for(int i=1;i<6;i++){
+=======
+        //PetitAsteroide comete = new PetitAsteroide(jeu ,"comete",20,20 ); 
+        /*for(int i=1;i<6;i++){
+>>>>>>> fe2b730a7fbc3bbda1fe6d72c77c5cd8be6ca1fd
             comete.dessiner(this.getGraphics());
-        }
+        }*/
     }
 
     @Override
     protected void dessinerArrierePlan(Graphics grphcs) {
         grphcs.setColor(Color.black);
-        grphcs.fillRect(0, 0, 500, 500);
-        grphcs.fillRect(0, 0, 500, 500);
         grphcs.fillRect(0, 0, 500, 500);
         grphcs.setColor(Color.white);
         grphcs.drawString("Vies : ", 300, 15);
@@ -67,9 +85,7 @@ public class leJeu extends Jeu{
         grphcs.drawString("Score : ", 400, 15);
         String sScore = ""+score;
         grphcs.drawString(sScore, 448, 15);
-
- 
-        
+   
     }
 
     @Override
@@ -84,7 +100,7 @@ public class leJeu extends Jeu{
 
     @Override
     protected boolean aGagne() {
-      return true ; 
+      return false ; 
     }
 
     @Override
@@ -92,4 +108,12 @@ public class leJeu extends Jeu{
        return false ; 
     }
 
+    public void setScore(int score) {
+        this.score = score;
+    }
+
+    public void setVie(int vie) {
+        this.vie = vie;
+    }
+    
 }

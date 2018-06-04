@@ -19,14 +19,9 @@ import java.awt.event.KeyListener;
  * @author emili
  */
 public class Vaisseau extends ObjetTouchable implements KeyListener {
-
-    // ATTRIBUTS 
-    private Jeu jeu ; 
-    
     
     public Vaisseau(Jeu g, String nom, int x, int y) {
         super(g, nom, x, y);
-        jeu= g ; 
     }
 
     @Override
@@ -69,23 +64,5 @@ public class Vaisseau extends ObjetTouchable implements KeyListener {
     
     }
     
-    @Override
-    protected void deplacerXY(double dx, double dy) {
-        super.deplacerXY(dx, dy); //To change body of generated methods, choose Tools | Templates.
-        this.dessiner(jeu.getGraphics(),(int)dx,(int)dy);
-    } 
-     public void dessiner (Graphics g, int x, int y) {
-        g.setColor(WHITE);
-        //int x = 10;
-        //int y = 10;
-        int[] tabx = new int[3];
-        int[] taby = new int[3];
-        tabx[0] = x;
-        taby[0] = y;
-        tabx[1] = x+20;
-        taby[1] = y+10;
-        tabx[2] = x;
-        taby[2] = y+20;
-        g.drawPolygon(tabx, taby, 3);
-    }
+  
 }

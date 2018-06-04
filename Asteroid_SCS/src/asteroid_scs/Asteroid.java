@@ -28,7 +28,7 @@ public class Asteroid extends Jeu {
         super(largeur, hauteur, title);
         joueur = new Vaisseau(this, "joueur", 0, 0);
         dessinerArrierePlan(this.getGraphics());
-        creeObjets();
+   //     creeObjets();
 
     }
     
