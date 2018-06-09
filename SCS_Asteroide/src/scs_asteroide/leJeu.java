@@ -26,10 +26,14 @@ public class leJeu extends Jeu{
     //ATTRIBUTS 
     private Vaisseau vaisseau = null;
     private Score score = null;
+    private boolean perdu ; 
+    private boolean gagne; 
     
     public leJeu(int largeur, int hauteur, String title) {
         super(largeur, hauteur, title);  
         vaisseau = new Vaisseau(this, "fusee", 10, 10);
+        perdu= false ; 
+        gagne = false ; 
     }
 
     @Override
@@ -38,33 +42,34 @@ public class leJeu extends Jeu{
         this.ajouteEcouteurClavier(vaisseau);
         this.ajouter(vaisseau);
         
-        GrandAsteroide ga = new GrandAsteroide(this ,"grosA",600,300 ); 
+      /*  GrandAsteroide ga = new GrandAsteroide(this ,"grosA",800,300 ); 
+        MoyenAsteroide ma = new MoyenAsteroide(this ,"moyen_asteroide",800,600 ); 
+        PetitAsteroide pa = new PetitAsteroide(this,"petit_asteroide",800,100);
+        PetitAsteroide pa2 = new PetitAsteroide(this,"petit_asteroide",800,400);
         
-        MoyenAsteroide ma = new MoyenAsteroide(this ,"moyen_asteroide",500,600 ); 
-        PetitAsteroide pa = new PetitAsteroide(this,"petit_asteroide",600,100);
-        PetitAsteroide pa2 = new PetitAsteroide(this,"petit_asteroide",600,400);
-        
-
-
         this.ajouter(pa);        
         this.ajouter(pa2);        
         this.ajouter(ma);        
-        this.ajouter(ga);
+        this.ajouter(ga);*/
+        
 
         for(int i=0;i<5;i++){
             if(i==4){
-                System.out.println("hey");
-                GrandAsteroide galea = new GrandAsteroide(this ,"grosA",600,300 );         
-                MoyenAsteroide malea = new MoyenAsteroide(this ,"moyen_asteroide",500,600 ); 
-                PetitAsteroide palea = new PetitAsteroide(this,"petit_asteroide",600,100);
-                PetitAsteroide palea2 = new PetitAsteroide(this,"petit_asteroide",600,400);
+                GrandAsteroide galea = new GrandAsteroide(this ,"grosA",800,300 );         
+                MoyenAsteroide malea = new MoyenAsteroide(this ,"moyen_asteroide",800,600 ); 
+                PetitAsteroide palea = new PetitAsteroide(this,"petit_asteroide",800,100);
+                PetitAsteroide palea2 = new PetitAsteroide(this,"petit_asteroide",800,400);
 
                 this.ajouter(palea);        
                 this.ajouter(palea2);        
                 this.ajouter(malea);        
                 this.ajouter(galea);
             }
+           
         }
+        
+        genererAsteroide() ; 
+        
     }
 
     @Override
@@ -94,24 +99,57 @@ public class leJeu extends Jeu{
 
     @Override
     protected boolean aGagne() {
-      return false ; 
+      return gagne ; 
     }
 
     @Override
     protected boolean aPerdu() {
-        boolean res = false ; 
+ 
         if(vaisseau.getVie() == 0){
-            res= true ; 
+            perdu= true ; 
             
+        }else {
+            perdu = false; 
         }
-       return res; 
+       return perdu; 
     }
 
     public void ajouterScore(int _score) {
         this.score.ajouterScore(_score);
     }
     
+    public void genererAsteroide(){
+        
+     /*   while(perdu==false){
+                GrandAsteroide galea = new GrandAsteroide(this ,"grosA",800,300 );         
+                MoyenAsteroide malea = new MoyenAsteroide(this ,"moyen_asteroide",500,600 ); 
+                PetitAsteroide palea = new PetitAsteroide(this,"petit_asteroide",600,100);
 
+                this.ajouter(palea);        
+                this.ajouter(malea);        
+                this.ajouter(galea);
+                 
+        }*/
+    }
     
+ /*   public void manche(){
+        switch (vaisseau.getVie()) {
+            case 2: 
+                    this.supprimer(vaisseau); 
+                break;
+            case 1:
+                break;
+            case 0:
+                perdu() ;
+                break;
+            default:
+                break;
+        }
+        
+    }
+    
+    */
+   
+               
 
 }

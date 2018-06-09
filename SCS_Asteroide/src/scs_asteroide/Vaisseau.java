@@ -68,6 +68,7 @@ public class Vaisseau extends ObjetTouchable implements KeyListener {
                 Tir t = new Tir(this.leJeu(), "tir", this.milieuX()+50, this.milieuY()) ; 
                 leJeu().ajouter(t); 
                 
+                
             }
                         break ;           
 
