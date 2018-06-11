@@ -68,6 +68,9 @@ public class leJeu extends Jeu{
            
         }
         
+        score = new Score(this, WIDTH);
+        this.ajouter(score);
+        
         //genererAsteroide() ; 
         
     }
@@ -77,8 +80,7 @@ public class leJeu extends Jeu{
         grphcs.setColor(Color.black);
         grphcs.fillRect(0, 0, 800, 800);
         grphcs.setColor(Color.white);
-        score = new Score(this, WIDTH);
-        this.ajouter(score);
+        
    
     }
 
