@@ -32,7 +32,8 @@ public class GrandAsteroide extends Asteroide {
            leJeu().ajouter(ma1);
            
            leJeu().supprimer(this);
-           
+           setNombreAsteroides(getNombreAsteroides()+2);
+                 
            
         }else if (objet.getTypeObjet()=="Moyen asteroide"){
             
@@ -45,6 +46,26 @@ public class GrandAsteroide extends Asteroide {
         }else if(objet.getTypeObjet()=="Vaisseau"){
             leJeu().supprimer(this);
         }
+        
+        if(this.milieuX()<=0){
+            leJeu().supprimer(this);
+            /*GrandAsteroide galea = new GrandAsteroide(leJeu() ,"grosA",800,300 );  
+            leJeu().ajouter(galea); */
+            this.setNombreAsteroides(this.getNombreAsteroides()-1);
+            System.out.println("astéroides = "+this.getNombreAsteroides());
+        }else if(this.milieuY()<=0){
+            leJeu().supprimer(this);
+            /*GrandAsteroide galea = new GrandAsteroide(leJeu() ,"grosA",800,300 );  
+            leJeu().ajouter(galea); */
+            this.setNombreAsteroides(this.getNombreAsteroides()-1);
+             System.out.println("astéroides = "+this.getNombreAsteroides());
+        }
+        
+        if(this.getNombreAsteroides()<5){
+            GrandAsteroide galea = new GrandAsteroide(leJeu() ,"grosA",800,300 );  
+            leJeu().ajouter(galea);
+        }
+       
     }
 
     @Override

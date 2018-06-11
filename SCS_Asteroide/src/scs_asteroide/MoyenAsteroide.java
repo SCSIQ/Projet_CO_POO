@@ -34,7 +34,7 @@ public class MoyenAsteroide extends Asteroide {
              PetitAsteroide a3= new PetitAsteroide(leJeu(),"petit_asteroide",this.milieuX()-10,this.milieuY());
              leJeu().supprimer(this);
              
-             
+             setNombreAsteroides(getNombreAsteroides()+2);
              
              this.leJeu().ajouter(a1);
              this.leJeu().ajouter(a2);
@@ -43,6 +43,25 @@ public class MoyenAsteroide extends Asteroide {
              
         }else if(objet.getTypeObjet()=="Vaisseau"){
             leJeu().supprimer(this);
+        }
+        
+        if(this.milieuX()<=0){
+            leJeu().supprimer(this);
+            /* MoyenAsteroide galea = new MoyenAsteroide (leJeu() ,"moyen_Asteroide",800,300 );  
+            leJeu().ajouter(galea); */
+             this.setNombreAsteroides(this.getNombreAsteroides()-1);
+            System.out.println("astéroides = "+this.getNombreAsteroides());
+        }else if(this.milieuY()<=0){
+            leJeu().supprimer(this);
+            /*MoyenAsteroide  galea = new MoyenAsteroide (leJeu() ,"moyen_Asteroide",800,300 );  
+            leJeu().ajouter(galea); */
+             this.setNombreAsteroides(this.getNombreAsteroides()-1);
+            System.out.println("astéroides = "+this.getNombreAsteroides());
+        }
+        
+         if(this.getNombreAsteroides()<5){
+            MoyenAsteroide galea = new MoyenAsteroide(leJeu() ,"moyen_asteroide",800,300 );  
+            leJeu().ajouter(galea);
         }
     }
 

@@ -38,12 +38,40 @@ public class PetitAsteroide extends Asteroide {
                 int x = (int) (random(6)*100)+500;
                 int y = (int) (random(6)*100)+600;
 
-                
+                setNombreAsteroides(getNombreAsteroides()-1);
                 super.getJeuAsteroid().ajouterScore(10);
             
         }else if(objet.getTypeObjet()=="Vaisseau"){
             leJeu().supprimer(this);
             
+        }
+        
+         if(this.milieuX()<=0){
+            leJeu().supprimer(this);
+            /*PetitAsteroide  galea = new PetitAsteroide (leJeu() ,"petit_Asteroide",800,300 );  
+            leJeu().ajouter(galea); */
+            this.setNombreAsteroides(this.getNombreAsteroides()-1);
+            System.out.println("astéroides = "+this.getNombreAsteroides());
+        }else if(this.milieuY()<=0){
+            leJeu().supprimer(this);
+            /*PetitAsteroide  galea = new PetitAsteroide (leJeu() ,"petit_Asteroide",800,300 );  
+            leJeu().ajouter(galea); */
+            this.setNombreAsteroides(this.getNombreAsteroides()-1);
+            System.out.println("astéroides = "+this.getNombreAsteroides());
+        }
+         
+        if(this.getNombreAsteroides()<5){
+            PetitAsteroide galea = new PetitAsteroide(leJeu() ,"Petit_Asteroide",800,300 );  
+            leJeu().ajouter(galea);
+        }
+        if (this.getNombreAsteroides()<0){
+            PetitAsteroide galea = new PetitAsteroide(leJeu() ,"Petit_Asteroide",800,300 );  
+            leJeu().ajouter(galea);
+            MoyenAsteroide gale = new MoyenAsteroide(leJeu() ,"Moyen_Asteroide",800,300 );  
+            leJeu().ajouter(gale);
+            PetitAsteroide gal = new PetitAsteroide(leJeu() ,"Petit_Asteroide",800,300 );  
+            leJeu().ajouter(gal);
+            this.setNombreAsteroides(3);
         }
     }
 
