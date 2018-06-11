@@ -31,17 +31,17 @@ public class Tir extends ObjetTouchable {
                if(objet.getTypeObjet()=="Grand asteroide"){
                    leJeu().supprimer(this); 
                    objet.effetCollision(this);
-                   jeu.ajouterScore(5);
+                   jeu.ajouterScore(1);
                }
                if(objet.getTypeObjet()=="Moyen asteroide"){
                    leJeu().supprimer(this); 
                    objet.effetCollision(this);
-                   jeu.ajouterScore(10);
+                   jeu.ajouterScore(1);
                }
                if(objet.getTypeObjet()=="Petit asteroide"){
                    leJeu().supprimer(this); 
                    objet.effetCollision(this);
-                   jeu.ajouterScore(15);
+                   jeu.ajouterScore(1);
                }
                if(objet.getTypeObjet()=="Vaisseau"){
                    leJeu().supprimer(this); 
