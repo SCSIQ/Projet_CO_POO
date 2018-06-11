@@ -62,10 +62,10 @@ public class GrandAsteroide extends Asteroide {
              System.out.println("astéroides = "+this.getNombreAsteroides());
         }
         
-        if(this.getNombreAsteroides()<5){
+        /*if(this.getNombreAsteroides()<5){
             GrandAsteroide galea = new GrandAsteroide(leJeu() ,"grosA",800,300 );  
             leJeu().ajouter(galea);
-        }
+        }*/
        
     }
 

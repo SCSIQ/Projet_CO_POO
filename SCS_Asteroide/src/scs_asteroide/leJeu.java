@@ -16,6 +16,7 @@ import static jdk.nashorn.internal.objects.NativeMath.random;
 import java.util.TimerTask;
 import java.util.Timer; 
 import java.util.TimerTask; 
+import java.util.Random;
 
 
 
@@ -31,6 +32,10 @@ public class leJeu extends Jeu{
     private Score score = null;
     private boolean perdu ; 
     private boolean gagne; 
+    private int i =0;
+    private int posX = (int)random(100)+900;
+    private int posY =(int)random(100)+500;
+    private Random rand = new Random();
     
     public leJeu(int largeur, int hauteur, String title) {
         super(largeur, hauteur, title);  
@@ -46,46 +51,14 @@ public class leJeu extends Jeu{
 
         this.ajouteEcouteurClavier(vaisseau);
         
-        GrandAsteroide ga = new GrandAsteroide(this ,"grosA",800,300 ); 
-      /* MoyenAsteroide ma = new MoyenAsteroide(this ,"moyen_asteroide",800,600 ); 
-=======
-        MoyenAsteroide ma = new MoyenAsteroide(this ,"moyen_asteroide",800,600 ); 
->>>>>>> cc779fd8caba2c30fac7d333753d42cc021d193d
-        PetitAsteroide pa = new PetitAsteroide(this,"petit_asteroide",800,100);
-        PetitAsteroide pa2 = new PetitAsteroide(this,"petit_asteroide",800,400);
+        this.ajouter(vaisseau);
         
-        this.ajouter(pa);        
-        this.ajouter(pa2);        
-<<<<<<< HEAD
-        this.ajouter(ma); */       
-        this.ajouter(ga);
-       
-        //this.ajouter(ma);        
-        //this.ajouter(ga);
-        
-
-        for(int i=0;i<5;i++){
-            if(i==4){
-                GrandAsteroide galea = new GrandAsteroide(this ,"grosA",800,300 );         
-                MoyenAsteroide malea = new MoyenAsteroide(this ,"moyen_asteroide",800,600 ); 
-                PetitAsteroide palea = new PetitAsteroide(this,"petit_asteroide",800,100);
-                PetitAsteroide palea2 = new PetitAsteroide(this,"petit_asteroide",800,400);
-
-                this.ajouter(palea);        
-                this.ajouter(palea2);        
-                this.ajouter(malea);        
-                this.ajouter(galea);
-                
-            }
-           
-      
-        }
+        GrandAsteroide ga = new GrandAsteroide(this ,"grosA",800,300 );      
+        this.ajouter(ga);        
         
         score = new Score(this, WIDTH);
         this.ajouter(score);
-        
-        //genererAsteroide() ; 
-        
+                
        
     }
 
@@ -96,6 +69,26 @@ public class leJeu extends Jeu{
         grphcs.setColor(Color.black);
         grphcs.fillRect(0, 0, 800, 800);
         grphcs.setColor(Color.white);
+        
+        
+        if(i%10==0){
+            int n = rand.nextInt(3);
+            System.out.println("rand : "+rand);
+            switch (n){
+                case 0 : PetitAsteroide galea0 = new PetitAsteroide((this),"petit_asteroide",posX,posY );
+                        this.ajouter(galea0);
+                    break;
+                case 1 : MoyenAsteroide galea1 = new MoyenAsteroide((this),"moyen_asteroide",posX,posY );
+                        this.ajouter(galea1);
+                    break;
+                case 2 : GrandAsteroide galea2 = new GrandAsteroide((this),"grosA",posX,posY );
+                        this.ajouter(galea2);
+                    break;
+            }
+             
+            
+        }
+        i++;
         
    
     }
@@ -130,31 +123,6 @@ public class leJeu extends Jeu{
     public void ajouterScore(int _score) {
         this.score.ajouterScore(_score);
     }
-    
-    public void genererAsteroide(){
-     
-   
-        
-    }
-    
- /*   public void manche(){
-        switch (vaisseau.getVie()) {
-            case 2: 
-                    this.supprimer(vaisseau); 
-                break;
-            case 1:
-                break;
-            case 0:
-                perdu() ;
-                break;
-            default:
-                break;
-        }
-        
-    }
-    
-    
-   */
                
 
 }

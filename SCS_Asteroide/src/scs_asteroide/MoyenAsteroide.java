@@ -59,10 +59,10 @@ public class MoyenAsteroide extends Asteroide {
             System.out.println("astéroides = "+this.getNombreAsteroides());
         }
         
-         if(this.getNombreAsteroides()<5){
+        /* if(this.getNombreAsteroides()<5){
             MoyenAsteroide galea = new MoyenAsteroide(leJeu() ,"moyen_asteroide",800,300 );  
             leJeu().ajouter(galea);
-        }
+        }*/
     }
 
     @Override

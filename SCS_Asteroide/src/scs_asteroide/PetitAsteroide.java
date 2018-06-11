@@ -64,11 +64,11 @@ public class PetitAsteroide extends Asteroide {
             System.out.println("astéroides = "+this.getNombreAsteroides());
         }
          
-        if(this.getNombreAsteroides()<5){
+        /*if(this.getNombreAsteroides()<5){
             PetitAsteroide galea = new PetitAsteroide(leJeu() ,"Petit_Asteroide",800,300 );  
             leJeu().ajouter(galea);
-        }
-        if (this.getNombreAsteroides()<0){
+        }*/
+        /* if (this.getNombreAsteroides()<0){
             PetitAsteroide galea = new PetitAsteroide(leJeu() ,"Petit_Asteroide",800,300 );  
             leJeu().ajouter(galea);
             MoyenAsteroide gale = new MoyenAsteroide(leJeu() ,"Moyen_Asteroide",800,300 );  
@@ -76,7 +76,7 @@ public class PetitAsteroide extends Asteroide {
             PetitAsteroide gal = new PetitAsteroide(leJeu() ,"Petit_Asteroide",800,300 );  
             leJeu().ajouter(gal);
             this.setNombreAsteroides(3);
-        }
+        }*/
     }
 
     @Override
