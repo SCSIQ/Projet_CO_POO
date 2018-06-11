@@ -35,14 +35,10 @@ public class PetitAsteroide extends Asteroide {
             leJeu().supprimer(this);
             
             
-<<<<<<< HEAD
                 int x = (int) (random(6)*100)+500;
                 int y = (int) (random(6)*100)+600;
 
                 setNombreAsteroides(getNombreAsteroides()-1);
-                super.getJeuAsteroid().ajouterScore(10);
-=======
->>>>>>> cc779fd8caba2c30fac7d333753d42cc021d193d
             
             
                 //int x = (int) (random(6)*100)+500;

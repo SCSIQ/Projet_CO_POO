@@ -6,7 +6,6 @@
 package scs_asteroide;
 
 import iut.Jeu;
-<<<<<<< HEAD
 import iut.Lutin;
 import iut.Lutins;
 import java.awt.Image;
@@ -20,10 +19,7 @@ import javax.swing.JFrame;
 import javax.swing.JLabel;
 import java.util.TimerTask;
 import javax.swing.Timer;
-=======
-import java.util.Timer; 
 import java.util.TimerTask; 
->>>>>>> cc779fd8caba2c30fac7d333753d42cc021d193d
 
 
 /**

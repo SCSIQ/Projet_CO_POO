@@ -13,13 +13,10 @@ import java.awt.Image;
 import java.io.File;
 import javax.swing.JOptionPane;
 import static jdk.nashorn.internal.objects.NativeMath.random;
-<<<<<<< HEAD
 import java.util.TimerTask;
-=======
 import java.util.Timer; 
 import java.util.TimerTask; 
 
->>>>>>> cc779fd8caba2c30fac7d333753d42cc021d193d
 
 
 
@@ -48,10 +45,8 @@ public class leJeu extends Jeu{
     protected void creeObjets() {
 
         this.ajouteEcouteurClavier(vaisseau);
-        this.ajouter(vaisseau);
         
         GrandAsteroide ga = new GrandAsteroide(this ,"grosA",800,300 ); 
-<<<<<<< HEAD
       /* MoyenAsteroide ma = new MoyenAsteroide(this ,"moyen_asteroide",800,600 ); 
 =======
         MoyenAsteroide ma = new MoyenAsteroide(this ,"moyen_asteroide",800,600 ); 
@@ -65,11 +60,9 @@ public class leJeu extends Jeu{
         this.ajouter(ma); */       
         this.ajouter(ga);
        
-=======
-        this.ajouter(ma);        
-        this.ajouter(ga);
+        //this.ajouter(ma);        
+        //this.ajouter(ga);
         
->>>>>>> cc779fd8caba2c30fac7d333753d42cc021d193d
 
         for(int i=0;i<5;i++){
             if(i==4){
@@ -85,19 +78,18 @@ public class leJeu extends Jeu{
                 
             }
            
-<<<<<<< HEAD
-      }
-=======
+      
         }
         
         score = new Score(this, WIDTH);
         this.ajouter(score);
         
         //genererAsteroide() ; 
->>>>>>> cc779fd8caba2c30fac7d333753d42cc021d193d
         
        
     }
+
+
 
     @Override
     protected void dessinerArrierePlan(Graphics grphcs) {
@@ -132,7 +124,7 @@ public class leJeu extends Jeu{
         }else {
             perdu = false; 
         }
-       return perdu; 
+       return perdu;  
     }
 
     public void ajouterScore(int _score) {
