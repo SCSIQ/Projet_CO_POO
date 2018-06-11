@@ -34,6 +34,8 @@ public class Vaisseau extends ObjetTouchable implements KeyListener {
     @Override
     public void effetCollision(Objet objet) {
         vie.enleverVie();
+        this.changeSprite("fusee_ennemie"); 
+        this.changeSprite("fusee"); 
     }
 
     @Override
