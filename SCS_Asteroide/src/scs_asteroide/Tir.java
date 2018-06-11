@@ -18,31 +18,32 @@ public class Tir extends ObjetTouchable {
     //ATTRIBUTS 
     private double angle=0 ; 
     private double vitesse=0.5;
+    private final leJeu jeu;
     
     public Tir(Jeu g, String nom, int x, int y) {
         super(g, nom, x, y);
+        jeu = (leJeu)g;
     }
 
     @Override
     public void effetCollision(Objet objet) {
          if (objet!=this){
                if(objet.getTypeObjet()=="Grand asteroide"){
-                   
                    leJeu().supprimer(this); 
-                   
-                   
+                   objet.effetCollision(this);
+                   jeu.ajouterScore(1);
                }
                if(objet.getTypeObjet()=="Moyen asteroide"){
-                    leJeu().supprimer(this); 
-                   
+                   leJeu().supprimer(this); 
+                   objet.effetCollision(this);
+                   jeu.ajouterScore(1);
                }
                if(objet.getTypeObjet()=="Petit asteroide"){
-                   
-                    leJeu().supprimer(this); 
-                   
+                   leJeu().supprimer(this); 
+                   objet.effetCollision(this);
+                   jeu.ajouterScore(1);
                }
                if(objet.getTypeObjet()=="Vaisseau"){
-                   
                    leJeu().supprimer(this); 
                }
            }

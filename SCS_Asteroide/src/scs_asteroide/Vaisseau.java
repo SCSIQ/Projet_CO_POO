@@ -34,6 +34,8 @@ public class Vaisseau extends ObjetTouchable implements KeyListener {
     @Override
     public void effetCollision(Objet objet) {
         vie.enleverVie();
+        this.changeSprite("fusee_ennemie"); 
+        this.changeSprite("fusee"); 
     }
 
     @Override
@@ -65,7 +67,7 @@ public class Vaisseau extends ObjetTouchable implements KeyListener {
                 break; 
             case KeyEvent.VK_SPACE:
                 if (this.posDroite()<this.leJeu().largeur()){
-                Tir t = new Tir(this.leJeu(), "tir", this.milieuX()+50, this.milieuY()) ; 
+                Tir t = new Tir((leJeu)jeu, "tir", this.milieuX()+50, this.milieuY()) ; 
                 leJeu().ajouter(t); 
                 
                 

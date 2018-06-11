@@ -13,7 +13,13 @@ import java.awt.Image;
 import java.io.File;
 import javax.swing.JOptionPane;
 import static jdk.nashorn.internal.objects.NativeMath.random;
+<<<<<<< HEAD
 import java.util.TimerTask;
+=======
+import java.util.Timer; 
+import java.util.TimerTask; 
+
+>>>>>>> cc779fd8caba2c30fac7d333753d42cc021d193d
 
 
 
@@ -31,7 +37,7 @@ public class leJeu extends Jeu{
     
     public leJeu(int largeur, int hauteur, String title) {
         super(largeur, hauteur, title);  
-        vaisseau = new Vaisseau(this, "fusee", 10, 10);
+        vaisseau = new Vaisseau(this, "fusee", 10, 100);
         perdu= false ; 
         gagne = false ; 
         
@@ -45,15 +51,25 @@ public class leJeu extends Jeu{
         this.ajouter(vaisseau);
         
         GrandAsteroide ga = new GrandAsteroide(this ,"grosA",800,300 ); 
+<<<<<<< HEAD
       /* MoyenAsteroide ma = new MoyenAsteroide(this ,"moyen_asteroide",800,600 ); 
+=======
+        MoyenAsteroide ma = new MoyenAsteroide(this ,"moyen_asteroide",800,600 ); 
+>>>>>>> cc779fd8caba2c30fac7d333753d42cc021d193d
         PetitAsteroide pa = new PetitAsteroide(this,"petit_asteroide",800,100);
         PetitAsteroide pa2 = new PetitAsteroide(this,"petit_asteroide",800,400);
         
         this.ajouter(pa);        
         this.ajouter(pa2);        
+<<<<<<< HEAD
         this.ajouter(ma); */       
         this.ajouter(ga);
        
+=======
+        this.ajouter(ma);        
+        this.ajouter(ga);
+        
+>>>>>>> cc779fd8caba2c30fac7d333753d42cc021d193d
 
         for(int i=0;i<5;i++){
             if(i==4){
@@ -69,7 +85,16 @@ public class leJeu extends Jeu{
                 
             }
            
+<<<<<<< HEAD
       }
+=======
+        }
+        
+        score = new Score(this, WIDTH);
+        this.ajouter(score);
+        
+        //genererAsteroide() ; 
+>>>>>>> cc779fd8caba2c30fac7d333753d42cc021d193d
         
        
     }
@@ -79,13 +104,7 @@ public class leJeu extends Jeu{
         grphcs.setColor(Color.black);
         grphcs.fillRect(0, 0, 800, 800);
         grphcs.setColor(Color.white);
-        /*
-        grphcs.drawString("Score : ", 400, 15);
-        String sScore = ""+score;
-        grphcs.drawString(sScore, 448, 15);
-        */
-        score = new Score(this, WIDTH);
-        this.ajouter(score);
+        
    
     }
 
@@ -121,17 +140,9 @@ public class leJeu extends Jeu{
     }
     
     public void genererAsteroide(){
+     
+   
         
-     /*   while(perdu==false){
-                GrandAsteroide galea = new GrandAsteroide(this ,"grosA",800,300 );         
-                MoyenAsteroide malea = new MoyenAsteroide(this ,"moyen_asteroide",500,600 ); 
-                PetitAsteroide palea = new PetitAsteroide(this,"petit_asteroide",600,100);
-
-                this.ajouter(palea);        
-                this.ajouter(malea);        
-                this.ajouter(galea);
-                 
-        }*/
     }
     
  /*   public void manche(){
@@ -150,8 +161,8 @@ public class leJeu extends Jeu{
         
     }
     
-    */
-   
+    
+   */
                
 
 }
