@@ -13,6 +13,8 @@ import java.awt.Image;
 import java.io.File;
 import javax.swing.JOptionPane;
 import static jdk.nashorn.internal.objects.NativeMath.random;
+import java.util.Timer; 
+import java.util.TimerTask; 
 
 
 
@@ -42,7 +44,7 @@ public class leJeu extends Jeu{
         this.ajouteEcouteurClavier(vaisseau);
         this.ajouter(vaisseau);
         
-      /*  GrandAsteroide ga = new GrandAsteroide(this ,"grosA",800,300 ); 
+        GrandAsteroide ga = new GrandAsteroide(this ,"grosA",800,300 ); 
         MoyenAsteroide ma = new MoyenAsteroide(this ,"moyen_asteroide",800,600 ); 
         PetitAsteroide pa = new PetitAsteroide(this,"petit_asteroide",800,100);
         PetitAsteroide pa2 = new PetitAsteroide(this,"petit_asteroide",800,400);
@@ -50,7 +52,7 @@ public class leJeu extends Jeu{
         this.ajouter(pa);        
         this.ajouter(pa2);        
         this.ajouter(ma);        
-        this.ajouter(ga);*/
+        this.ajouter(ga);
         
 
         for(int i=0;i<5;i++){
@@ -119,17 +121,9 @@ public class leJeu extends Jeu{
     }
     
     public void genererAsteroide(){
+     
+   
         
-     /*   while(perdu==false){
-                GrandAsteroide galea = new GrandAsteroide(this ,"grosA",800,300 );         
-                MoyenAsteroide malea = new MoyenAsteroide(this ,"moyen_asteroide",500,600 ); 
-                PetitAsteroide palea = new PetitAsteroide(this,"petit_asteroide",600,100);
-
-                this.ajouter(palea);        
-                this.ajouter(malea);        
-                this.ajouter(galea);
-                 
-        }*/
     }
     
  /*   public void manche(){
