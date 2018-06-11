@@ -29,9 +29,9 @@ public class Score extends iut.Objet {
      * @param g
      */
     public void dessiner(Graphics g) {
-        g.clearRect(395, 0, 100, 20);
-        g.setColor(Color.black);
-        g.fillRect(395, 0, 100, 20);
+        //g.clearRect(395, 0, 100, 20);
+        //g.setColor(Color.black);
+        //g.fillRect(395, 0, 100, 20);
         g.setColor(Color.white);
         g.drawString("Score : ", 400, 15);
         String sScore = "" + score;
@@ -63,7 +63,7 @@ public class Score extends iut.Objet {
     }
 
     public void ajouterScore(int _score) {
-        this.score = this.score + _score;
+        this.score += _score;
         System.out.println("score :"+score);
     }
 

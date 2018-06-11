@@ -37,8 +37,8 @@ public class PetitAsteroide extends Asteroide {
             
             
             
-                int x = (int) (random(6)*100)+500;
-                int y = (int) (random(6)*100)+600;
+                //int x = (int) (random(6)*100)+500;
+                //int y = (int) (random(6)*100)+600;
 
                             
         }else if(objet.getTypeObjet()=="Vaisseau"){
