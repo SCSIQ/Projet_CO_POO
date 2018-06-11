@@ -35,12 +35,12 @@ public class PetitAsteroide extends Asteroide {
             leJeu().supprimer(this);
             
             
+            
+            
                 int x = (int) (random(6)*100)+500;
                 int y = (int) (random(6)*100)+600;
 
-                
-                super.getJeuAsteroid().ajouterScore(10);
-            
+                            
         }else if(objet.getTypeObjet()=="Vaisseau"){
             leJeu().supprimer(this);
             

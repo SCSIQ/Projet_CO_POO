@@ -16,47 +16,55 @@ import java.awt.Graphics;
  */
 public class Score extends iut.Objet {
 
-    private int score= 0; 
- 
+    private int score;
+
     public Score(Jeu g, int val) {
         super(g, String.valueOf(val), 0, 0);
+        score = 0;
     }
-    
-    public void dessiner(Graphics g){
+
+    /**
+     * fonction qui permet d'afficher le score sur la fenetre de jeu
+     *
+     * @param g
+     */
+    public void dessiner(Graphics g) {
         g.clearRect(395, 0, 100, 20);
         g.setColor(Color.black);
         g.fillRect(395, 0, 100, 20);
         g.setColor(Color.white);
         g.drawString("Score : ", 400, 15);
-        String sScore = ""+score;
+        String sScore = "" + score;
         g.drawString(sScore, 448, 15);
     }
 
     @Override
     public boolean testerCollision(Objet objet) {
-        return false ; 
+        return false;
     }
 
     @Override
     public void effetCollision(Objet objet) {
-       
+
     }
 
     @Override
     public String getTypeObjet() {
-        return "Score"; 
+        return "Score";
     }
 
     @Override
     public void evoluer(long l) {
-       
+
     }
-     public int getScore() {
+
+    public int getScore() {
         return score;
     }
 
-    public void ajouterScore(int score) {
-        this.score += score;
+    public void ajouterScore(int _score) {
+        this.score = this.score + _score;
+        System.out.println("score :"+score);
     }
-    
+
 }
