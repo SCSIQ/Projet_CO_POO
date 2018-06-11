@@ -33,7 +33,7 @@ public class leJeu extends Jeu{
     
     public leJeu(int largeur, int hauteur, String title) {
         super(largeur, hauteur, title);  
-        vaisseau = new Vaisseau(this, "fusee", 10, 10);
+        vaisseau = new Vaisseau(this, "fusee", 10, 100);
         perdu= false ; 
         gagne = false ; 
     }
@@ -70,7 +70,10 @@ public class leJeu extends Jeu{
            
         }
         
-        genererAsteroide() ; 
+        score = new Score(this, WIDTH);
+        this.ajouter(score);
+        
+        //genererAsteroide() ; 
         
     }
 
@@ -79,13 +82,7 @@ public class leJeu extends Jeu{
         grphcs.setColor(Color.black);
         grphcs.fillRect(0, 0, 800, 800);
         grphcs.setColor(Color.white);
-        /*
-        grphcs.drawString("Score : ", 400, 15);
-        String sScore = ""+score;
-        grphcs.drawString(sScore, 448, 15);
-        */
-        score = new Score(this, WIDTH);
-        this.ajouter(score);
+        
    
     }
 

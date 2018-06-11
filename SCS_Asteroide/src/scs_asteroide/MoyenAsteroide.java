@@ -28,17 +28,17 @@ public class MoyenAsteroide extends Asteroide {
         }else if (objet.getTypeObjet()=="Petit asteroide"){
             
         }if(objet.getTypeObjet()=="tir"){
-            
+            leJeu().supprimer(this);
              PetitAsteroide a1= new PetitAsteroide(leJeu(),"petit_asteroide",this.milieuX(),this.milieuY());
-             PetitAsteroide a2= new PetitAsteroide(leJeu(),"petit_asteroide",this.milieuX()+10,this.milieuY());
-             PetitAsteroide a3= new PetitAsteroide(leJeu(),"petit_asteroide",this.milieuX()-10,this.milieuY());
-             leJeu().supprimer(this);
+             //PetitAsteroide a2= new PetitAsteroide(leJeu(),"petit_asteroide",this.milieuX()+10,this.milieuY());
+             //PetitAsteroide a3= new PetitAsteroide(leJeu(),"petit_asteroide",this.milieuX()-10,this.milieuY());
+             
              
              
              
              this.leJeu().ajouter(a1);
-             this.leJeu().ajouter(a2);
-             this.leJeu().ajouter(a3);
+             //this.leJeu().ajouter(a2);
+             //this.leJeu().ajouter(a3);
        
              
         }else if(objet.getTypeObjet()=="Vaisseau"){
